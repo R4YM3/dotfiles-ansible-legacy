@@ -48,7 +48,7 @@
         # - opera
         # - postman
         # - slack
-        - teams-for-linux
+        # - teams-for-linux
         - vlc
 
   - name: instal global npm packages
