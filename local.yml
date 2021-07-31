@@ -11,8 +11,6 @@
         - catimg
         - curl
         - cmake
-        - docker-ce
-        - docker-ce-cli
         - fonts-firacode
         - fonts-powerline
         - git
