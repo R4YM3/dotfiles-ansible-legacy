@@ -49,7 +49,7 @@
         # - postman
         # - slack
         # - teams-for-linux
-        - vlc
+        # - vlc
 
   - name: instal global npm packages
     npm:
