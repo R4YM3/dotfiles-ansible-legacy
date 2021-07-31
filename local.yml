@@ -1,9 +1,10 @@
 ---
 - hosts: localhost
   connection: local
-  become: yes
   tasks:
-  - name: install packages
+
+  - name: install apt packages
+    become: yes
     package:
       name:
         - ack-grep
@@ -28,4 +29,23 @@
         - tmux
         - tmuxinator
         - zsh
+      state: present
+
+  - name: install snap packages
+    become: yes
+    package:
+      name:
+        - beekeeper-studio
+        - chromium
+        - code --classic
+        - discord
+        - gitkraken --classic
+        - icloud-for-linux
+        - libreoffice
+        - mailspring
+        - opera
+        - postman
+        - slack --classic
+        - teams-for-linux
+        - vlc
       state: present
