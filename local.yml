@@ -49,3 +49,14 @@
         - teams-for-linux
         - vlc
       state: present
+
+  - name: instal global npm packages
+    package:
+      name:
+        - eslint
+        - grunt
+        - gulp
+        - gtop
+        - http-server
+        - nodemon
+      state: present
