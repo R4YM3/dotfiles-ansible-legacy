@@ -27,6 +27,5 @@
         - snapd
         - tmux
         - tmuxinator
-        - virtualbox
         - zsh
       state: present
