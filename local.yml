@@ -23,6 +23,7 @@
         - make
         - neovim
         - nodejs
+        - npm
         - openconnect
         - powerline
         - python3
