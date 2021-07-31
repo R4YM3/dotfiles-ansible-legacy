@@ -31,7 +31,7 @@
         - tmuxinator
         - zsh
 
-  - name: install snap packages
+  - name: install classic snap packages
     become: yes
     snap:
       classic: yes
@@ -39,20 +39,11 @@
       name:
         - beekeeper-studio
         - chromium
-        # - code
-        # - discord
         - gitkraken
         - icloud-for-linux
-        # - libreoffice
-        # - mailspring
-        # - opera
-        # - postman
-        # - slack
-        # - teams-for-linux
-        # - vlc
 
   - name: instal global npm packages
-    npm:
+    community.general.npm:
       state: present
       name:
         - eslint
