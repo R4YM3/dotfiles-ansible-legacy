@@ -43,7 +43,7 @@
         # - discord
         - gitkraken
         - icloud-for-linux
-        - libreoffice
+        # - libreoffice
         - mailspring
         - opera
         - postman
