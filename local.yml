@@ -45,7 +45,7 @@
         - icloud-for-linux
         # - libreoffice
         # - mailspring
-        - opera
+        # - opera
         - postman
         - slack
         - teams-for-linux
