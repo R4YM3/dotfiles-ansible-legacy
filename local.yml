@@ -34,6 +34,7 @@
   - name: install snap packages
     become: yes
     snap:
+      classic: yes
       name:
         - beekeeper-studio
         - chromium
