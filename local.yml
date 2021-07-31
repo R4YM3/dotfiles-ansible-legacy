@@ -36,7 +36,6 @@
     snap:
       state: present
       name:
-        - code
         - discord
         - libreoffice
         - mailspring
@@ -53,6 +52,7 @@
       state: present
       name:
         - beekeeper-studio
+        - code
         - chromium
         - gitkraken
         - icloud-for-linux
