@@ -63,10 +63,10 @@
       state: present
       global: yes
       name:
-        - eslint
-        - grunt
-        - gulp
-        - gtop
-        - http-server
-        - nodemon
+        - 'eslint'
+        - 'grunt'
+        - 'gulp'
+        - 'gtop'
+        - 'http-server'
+        - 'nodemon'
 
