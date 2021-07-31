@@ -31,6 +31,21 @@
         - tmuxinator
         - zsh
 
+  - name: install snap packages
+    become: yes
+    snap:
+      state: present
+      name:
+        - code
+        - discord
+        - libreoffice
+        - mailspring
+        - opera
+        - postman
+        - slack
+        - teams-for-linux
+        - vlc
+
   - name: install classic snap packages
     become: yes
     snap:
@@ -42,7 +57,7 @@
         - gitkraken
         - icloud-for-linux
 
-  - name: instal global npm packages
+  - name: install global npm packages
     community.general.npm:
       state: present
       name:
