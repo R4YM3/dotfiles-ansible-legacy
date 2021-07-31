@@ -1,8 +1,9 @@
 ---
 - hosts: localhost
   connection: local
+  become: true
+  tags: always
   tasks:
-
   - name: install apt packages
     become: yes
     package:
@@ -31,6 +32,7 @@
         - tmux
         - tmuxinator
         - zsh
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
   # - name: install snap packages
   #  become: yes
@@ -57,6 +59,7 @@
         - chromium
         - gitkraken
         - icloud-for-linux
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 
   - name: install eslint
