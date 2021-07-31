@@ -1,9 +1,34 @@
 ---
 - hosts: localhost
   connection: local
-  become: false
+  become: yes
   tasks:
-  - name: install htop
+  - name: install packages
     package:
-      name: htop
+      name:
+        - ack-grep
+        - awscli
+        - catimg
+        - curl
+        - cmake
+        - docker-ce
+        - docker-ce-cli
+        - fonts-firacode
+        - fonts-powerline
+        - git
+        - git-all
+        - git-crypt
+        - htop
+        - lynx
+        - make
+        - neovim
+        - nodejs
+        - openconnect
+        - powerline
+        - python3
+        - snapd
+        - tmux
+        - tmuxinatorA
+        - virtualbox
+        - zsh
       state: present
