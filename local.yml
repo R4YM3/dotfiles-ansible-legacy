@@ -37,15 +37,15 @@
       name:
         - beekeeper-studio
         - chromium
-        - code --classic
+        - code
         - discord
-        - gitkraken --classic
+        - gitkraken
         - icloud-for-linux
         - libreoffice
         - mailspring
         - opera
         - postman
-        - slack --classic
+        - slack
         - teams-for-linux
         - vlc
       state: present
