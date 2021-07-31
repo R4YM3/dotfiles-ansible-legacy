@@ -47,7 +47,7 @@
         # - mailspring
         # - opera
         # - postman
-        - slack
+        # - slack
         - teams-for-linux
         - vlc
 
