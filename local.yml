@@ -58,8 +58,9 @@
         - icloud-for-linux
 
   - name: install global npm packages
-    community.general.npm:
+    npm:
       state: present
+      global: yes
       name:
         - eslint
         - grunt
