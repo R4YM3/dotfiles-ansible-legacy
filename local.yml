@@ -6,6 +6,7 @@
   - name: install apt packages
     become: yes
     package:
+      state: present
       name:
         - ack-grep
         - awscli
@@ -29,16 +30,16 @@
         - tmux
         - tmuxinator
         - zsh
-      state: present
 
   - name: install snap packages
     become: yes
     snap:
       classic: yes
+      state: present
       name:
         - beekeeper-studio
         - chromium
-        - code
+        # - code
         - discord
         - gitkraken
         - icloud-for-linux
@@ -49,10 +50,10 @@
         - slack
         - teams-for-linux
         - vlc
-      state: present
 
   - name: instal global npm packages
     npm:
+      state: present
       name:
         - eslint
         - grunt
@@ -60,4 +61,4 @@
         - gtop
         - http-server
         - nodemon
-      state: present
+
