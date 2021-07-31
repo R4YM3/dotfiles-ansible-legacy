@@ -58,15 +58,9 @@
         - gitkraken
         - icloud-for-linux
 
-  - name: install global npm packages
+
+  - name: install eslint
     npm:
       state: present
       global: yes
-      name:
-        - 'eslint'
-        - 'grunt'
-        - 'gulp'
-        - 'gtop'
-        - 'http-server'
-        - 'nodemon'
-
+      name: eslint
