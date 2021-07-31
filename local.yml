@@ -52,7 +52,7 @@
       state: present
       name:
         - beekeeper-studio
-        - code
+        # - code
         - chromium
         - gitkraken
         - icloud-for-linux
