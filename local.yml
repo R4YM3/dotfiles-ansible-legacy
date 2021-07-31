@@ -33,7 +33,7 @@
 
   - name: install snap packages
     become: yes
-    package:
+    snap:
       name:
         - beekeeper-studio
         - chromium
@@ -51,7 +51,7 @@
       state: present
 
   - name: instal global npm packages
-    package:
+    npm:
       name:
         - eslint
         - grunt
