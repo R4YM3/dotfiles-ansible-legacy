@@ -31,19 +31,19 @@
         - tmuxinator
         - zsh
 
-  - name: install snap packages
-    become: yes
-    snap:
-      state: present
-      name:
-        - discord
-        - libreoffice
-        - mailspring
-        - opera
-        - postman
-        - slack
-        - teams-for-linux
-        - vlc
+  # - name: install snap packages
+  #  become: yes
+  #  snap:
+  #    state: present
+  #    name:
+  #      - discord
+  #      - libreoffice
+  #      - mailspring
+  #      - opera
+  #      - postman
+  #      - slack
+  #      - teams-for-linux
+  #      - vlc
 
   - name: install classic snap packages
     become: yes
