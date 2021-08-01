@@ -1,4 +1,5 @@
 - name: apt | install | packages
+  tags: packages, apt
   become: yes
   package:
     state: present

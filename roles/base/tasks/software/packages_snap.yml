@@ -13,6 +13,7 @@
 #      - vlc
 
 - name: snap | install | classic packages
+  tags: packages, snap
   become: yes
   snap:
     classic: yes

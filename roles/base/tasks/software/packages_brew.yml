@@ -1,5 +1,5 @@
 - name: brew | install | packages
-  become: yes
+  tags: packages, brew
   brew:
     state: present
     name:
