@@ -1,0 +1,29 @@
+- name: apt | install | packages
+  become: yes
+  package:
+    state: present
+    name:
+      - ack-grep
+      - awscli
+      - catimg
+      - curl
+      - cmake
+      - fonts-firacode
+      - fonts-powerline
+      - git
+      - git-all
+      - git-crypt
+      - htop
+      - lynx
+      - make
+      - neovim
+      - nodejs
+      - npm
+      - openconnect
+      - powerline
+      - python3
+      - snapd
+      - tmux
+      - tmuxinator
+      - zsh
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
