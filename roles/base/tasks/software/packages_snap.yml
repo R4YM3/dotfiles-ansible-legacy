@@ -24,4 +24,3 @@
       - chromium
       - gitkraken
       - icloud-for-linux
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'

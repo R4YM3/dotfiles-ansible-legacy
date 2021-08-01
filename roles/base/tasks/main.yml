@@ -1,8 +1,13 @@
-- import_tasks: software/packages_apt.yml
-- import_tasks: software/packages_snap.yml
 
-- import_tasks: software/packages_homebrew.yml
-- import_tasks: software/packages_homebrew_cask.yml
+- block:
+  - import_tasks: software/packages_apt.yml
+  - import_tasks: software/packages_snap.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- block:
+  - import_tasks: software/packages_homebrew.yml
+  - import_tasks: software/packages_homebrew_cask.yml
+  when: ansible_distribution == 'MacOSX'
 
 - import_tasks: software/packages_npm.yml
 

@@ -19,4 +19,3 @@
       - tidal
       - vlc
       - whatsapp
-  when: ansible_distribution == 'MacOSX'
