@@ -25,4 +25,6 @@
       - icloud-for-linux
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
+- import_tasks: software/packages_apt.yml
 - import_tasks: software/packages_npm.yml
+
