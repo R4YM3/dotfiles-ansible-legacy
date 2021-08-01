@@ -1,0 +1,41 @@
+- name: npm | install | eslint
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: eslint
+
+- name: npm | install | grunt
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: eslint
+
+- name: npm | install | gulp
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: eslint
+
+- name: npm | install | gtop
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: eslint
+
+- name: npm | install | http-server
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: eslint
+
+- name: npm | install | nodemon
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: eslint
