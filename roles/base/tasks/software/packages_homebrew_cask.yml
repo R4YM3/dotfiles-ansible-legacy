@@ -19,18 +19,4 @@
       - tidal
       - vlc
       - whatsapp
-
-      # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-      - apparency
-      - qlcolorcode
-      - qlmarkdown
-      - qlprettypatch
-      - qlstephen
-      - qlvideo
-      - quicklook-csv
-      - quicklook-json
-      - quicklookase
-      - suspicious-package
-      - webpquicklook
-
   when: ansible_distribution == 'MacOSX'
