@@ -1,0 +1,28 @@
+- name: brew | install | packages
+  become: yes
+  brew:
+    state: present
+    name:
+      - ack
+      - cmake
+      - docker
+      - docker-compose
+      - ffmpeg
+      - git
+      - go
+      - htop
+      - lolcat
+      - lynx
+      - mono
+      - ncdu
+      - neovim
+      - node
+      - openvpn
+      - openconnect
+      - python
+      - tmux
+      - tmuxinator
+      - vim
+      - wget
+      - zsh
+  when: ansible_distribution == 'MacOSX'
