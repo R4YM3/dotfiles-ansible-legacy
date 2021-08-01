@@ -1,4 +1,5 @@
 
+# software
 - block:
   - import_tasks: software/packages_apt.yml
   - import_tasks: software/packages_snap.yml
@@ -11,5 +12,6 @@
 
 - import_tasks: software/packages_npm.yml
 
+# desktop enviroments
 - import_tasks: desktop_environments/macos/quicklook.yml
   when: ansible_distribution == 'MacOSX'
