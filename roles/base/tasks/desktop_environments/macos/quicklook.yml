@@ -14,5 +14,3 @@
       - quicklookase
       - suspicious-package
       - webpquicklook
-
-  when: ansible_distribution == 'MacOSX'

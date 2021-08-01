@@ -5,3 +5,6 @@
 - import_tasks: software/packages_homebrew_cask.yml
 
 - import_tasks: software/packages_npm.yml
+
+- import_tasks: desktop_environments/macos/quicklook.yml
+  when: ansible_distribution == 'MacOSX'
