@@ -1,0 +1,26 @@
+# - name: install snap packages
+#  become: yes
+#  snap:
+#    state: present
+#    name:
+#      - discord
+#      - libreoffice
+#      - mailspring
+#      - opera
+#      - postman
+#      - slack
+#      - teams-for-linux
+#      - vlc
+
+- name: snap | install | classic packages
+  become: yes
+  snap:
+    classic: yes
+    state: present
+    name:
+      - beekeeper-studio
+      # - code
+      - chromium
+      - gitkraken
+      - icloud-for-linux
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
