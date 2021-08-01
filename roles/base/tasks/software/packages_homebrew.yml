@@ -1,6 +1,6 @@
-- name: brew | install | packages
-  tags: packages, brew
-  brew:
+- name: homebrew | install | packages
+  tags: packages, homebrew
+  homebrew:
     state: present
     name:
       - ack
