@@ -1,4 +1,4 @@
 - import_tasks: software/packages_apt.yml
-- import_tasks: software/packages_brew.yml
+- import_tasks: software/packages_homebrew.yml
 - import_tasks: software/packages_snap.yml
 - import_tasks: software/packages_npm.yml
