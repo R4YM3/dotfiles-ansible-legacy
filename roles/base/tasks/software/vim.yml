@@ -21,7 +21,7 @@
 - name: vim | install | .vimrc
   tags: vim, dotfile
   file:
-    src: files/vim/vimrc
+    src: vim/vimrc
     dest: '~/.config/nvim/init.vim'
     state: link
 
