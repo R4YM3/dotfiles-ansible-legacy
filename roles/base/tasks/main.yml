@@ -1,5 +1,11 @@
-- include_vars: "{{ ansible_distribution }}.yml"
-  tags: always
+- name: CONFIG DIR?
+  debug: "msg='{{ CONFIG_DIR }}'"
+
+- name: ALIASES DIR?
+  debug: "msg='{{ ALIASES_DIR }}'"
+
+- name: NVIM DIR?
+  debug: "msg='{{ NVIM_DIR }}'"
 
 - name: create config directory
   file:

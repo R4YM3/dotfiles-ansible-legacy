@@ -2,6 +2,10 @@
 - hosts: localhost
   tags: always
 
+- include_vars:
+    dir: vars
+    files_matching: "{{ ansible_distribution }}.yml"
+
 - hosts: all
   tags: base
   roles:
