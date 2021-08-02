@@ -13,19 +13,19 @@
 
 - name: create config directory
   file:
-    path: '{{ansible_user_dir}}/.config'
+    path: '/home/raymond/.config'
     state: directory
     mode: 0755
 
 - name: create aliases directory
   file:
-    path: '{{ansible_user_dir}}/.config/aliases'
+    path: '/home/raymond/.config/aliases'
     state: directory
     mode: 0755
 
 - name: create nvim directory
   file:
-    path: '{{ansible_user_dir}}/.config/nvim'
+    path: '/home/raymond/.config/nvim'
     state: directory
     mode: 0755
 
