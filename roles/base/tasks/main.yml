@@ -1,6 +1,11 @@
 - include_vars: "{{ ansible_distribution }}.yml"
   tags: always
 
+
+- debug: msg="{{ lookup('env','HOME') }}"
+
+- debug: msg="{{ ansible_user_dir }}"
+
 - name: create config directory
   file:
     path: '{{ansible_user_dir}}/.config'
