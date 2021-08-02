@@ -19,5 +19,5 @@
 - name: tmux | install | boilerplate projects
   tags: tmux, .tmux.conf, dotfile
   copy:
-    src: {{role_path}}/files/tmuxinator/
+    src: "{{role_path}}/files/tmuxinator/"
     dest: ~/.config/tmuxinator/
