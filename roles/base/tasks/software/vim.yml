@@ -38,13 +38,14 @@
     mode: 0755
 
 - name: Install vim-plug
+  become: no
   #shell: 'curl -fLo {{HOME_DIR}}/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     dest: '{{ NVIM_DIR }}/autoload/plug.vim'
-    force: yes
 
 - name: vim | install | plugins (run PlugInstall)
+  become: no
   tags: vim, vim plugins
   shell: nvim +'PlugInstall --sync' +qa
 
