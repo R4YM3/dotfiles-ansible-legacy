@@ -37,14 +37,12 @@
     state: directory
     mode: 0755
 
-
-
 - name: Install vim-plug
-  shell: 'curl -fLo {{HOME_DIR}}/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  #get_url:
-    #url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    #dest: '{{ HOME_DIR }}.locals./autoload/plug.vim'
-    #force: yes
+  #shell: 'curl -fLo {{HOME_DIR}}/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: '{{ NVIM_DIR }}/autoload/plug.vim'
+    force: yes
 
 - name: vim | install | plugins (run PlugInstall)
   tags: vim, vim plugins

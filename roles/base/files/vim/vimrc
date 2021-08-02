@@ -56,7 +56,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
-call plug#begin()
+call plug#begin('~/.config/nvim')
 
 Plug 'Raimondi/delimitMate'                     " automatic closing of quotes, parenthesis, brackets, etc "
 Plug 'SirVer/ultisnips'                         " snippets engine."
