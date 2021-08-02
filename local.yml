@@ -2,7 +2,9 @@
 - hosts: localhost
   tags: always
 
-- include_vars:
+
+- name: Include only files matching bastion.yaml (2.2)
+  include_vars:
     dir: vars
     files_matching: "{{ ansible_distribution }}.yml"
 
