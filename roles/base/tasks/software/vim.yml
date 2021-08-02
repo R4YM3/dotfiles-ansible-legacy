@@ -20,10 +20,9 @@
 
 - name: vim | install | .vimrc
   tags: vim, dotfile
-  file:
+  copy:
     src: vim/vimrc
     dest: '~/.config/nvim/init.vim'
-    state: link
 
 - name: vim | install | plug package manager
   tags: vim, vim plugins
@@ -39,7 +38,6 @@
 
 - name: vim | install | aliases
   tags: vim, aliases
-  file:
+  copy:
     src: files/vim/aliases
     dest: '{{ALIASES_DIR}}/vim'
-    state: link
