@@ -12,7 +12,8 @@
   file:
     path: '{{ALIASES_DIR}}'
     state: directory
-    group: user
+    owner: raymond
+    group: raymond
     mode: 0755
 
 # software

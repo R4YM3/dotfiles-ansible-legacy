@@ -22,8 +22,8 @@
   file:
     path: '{{NVIM_DIR}}'
     state: directory
-    owner: user
-    group: user
+    owner: raymond
+    group: raymond
     mode: 0755
 
 - name: vim | install | .vimrc
@@ -37,8 +37,8 @@
   file:
     path: '{{NVIM_DIR}}/autoload'
     state: directory
-    owner: user
-    group: user
+    owner: raymond
+    group: raymond
     mode: 0755
 
 - name: Install vim-plugb
