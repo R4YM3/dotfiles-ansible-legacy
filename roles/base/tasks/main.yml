@@ -9,13 +9,13 @@
 
 - name: create aliases directory
   file:
-    path: '{{CONFIG_ALIASES}}'
+    path: '{{ALIASES_DIR}}'
     state: directory
     mode: 0755
 
 - name: create nvim directory
   file:
-    path: '{{CONFIG_DIR}}/nvim'
+    path: '{{NVIM_DIR}}/nvim'
     state: directory
     mode: 0755
 
