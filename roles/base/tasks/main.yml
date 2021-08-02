@@ -5,12 +5,16 @@
   file:
     path: '{{ CONFIG_DIR }}'
     state: directory
+    owner: user
+    group: user
     mode: 0755
 
 - name: create aliases directory
   file:
     path: '{{ALIASES_DIR}}'
     state: directory
+    owner: user
+    group: user
     mode: 0755
 
 # software
