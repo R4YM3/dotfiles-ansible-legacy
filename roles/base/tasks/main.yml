@@ -3,13 +3,13 @@
 
 - name: create config directory
   file:
-    path: ~/.config
+    path: /home/raymond/.config
     state: directory
     mode: 0755
 
 - name: create aliases directory
   file:
-    path: ~/.config/aliases
+    path: /home/raymond/.config/aliases
     state: directory
     mode: 0755
 
