@@ -1,6 +1,12 @@
 - include_vars: "{{ ansible_distribution }}.yml"
   tags: always
 
+- name: Create .config directory
+  file: path=~/.config state=directory mode=0755
+
+- name: Create .config/aliases directory
+  file: path=~/.config/aliases state=directory mode=0755
+
 # software
 - block:
   - import_tasks: software/packages_apt.yml
