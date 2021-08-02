@@ -2,4 +2,3 @@ HOME_DIR: /Users/voyager
 CONFIG_DIR: '{{HOME_DIR}}/.config'
 ALIASES_DIR: '{{CONFIG_DIR}}/.config'
 NVIM_DIR: '{{CONFIG_DIR}}/nvim'
-
