@@ -20,7 +20,5 @@
       - openvpn
       - openconnect
       - python
-      - tmux
-      - tmuxinator
       - wget
       - zsh

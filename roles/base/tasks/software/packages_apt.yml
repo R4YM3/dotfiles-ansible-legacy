@@ -23,6 +23,4 @@
       - powerline
       - python3
       - snapd
-      - tmux
-      - tmuxinator
       - zsh
