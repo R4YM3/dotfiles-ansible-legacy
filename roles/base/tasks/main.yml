@@ -1,15 +1,6 @@
 - include_vars: "{{ ansible_distribution }}.yml"
   tags: always
 
-- name: CONFIG DIR?
-  debug: "msg='{{ CONFIG_DIR }}'"
-
-- name: ALIASES DIR?
-  debug: "msg='{{ ALIASES_DIR }}'"
-
-- name: NVIM DIR?
-  debug: "msg='{{ NVIM_DIR }}'"
-
 - name: create config directory
   file:
     path: '{{ CONFIG_DIR }}'
@@ -19,12 +10,6 @@
 - name: create aliases directory
   file:
     path: '{{ALIASES_DIR}}'
-    state: directory
-    mode: 0755
-
-- name: create nvim directory
-  file:
-    path: '{{NVIM_DIR}}'
     state: directory
     mode: 0755
 
