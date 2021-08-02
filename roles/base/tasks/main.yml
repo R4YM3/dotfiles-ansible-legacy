@@ -1,3 +1,6 @@
+- include_vars: "{{ ansible_distribution }}.yml"
+  tags: always
+
 - name: CONFIG DIR?
   debug: "msg='{{ CONFIG_DIR }}'"
 
@@ -9,7 +12,7 @@
 
 - name: create config directory
   file:
-    path: '{{CONFIG_DIR}}'
+    path: '{{ CONFIG_DIR }}'
     state: directory
     mode: 0755
 
