@@ -1,31 +1,21 @@
 - include_vars: "{{ ansible_distribution }}.yml"
   tags: always
 
-
-- debug: msg="{{ lookup('env','HOME') }}"
-
-- debug: msg="{{ ansible_user_dir }}"
-
-- name: Display all variables/facts known for a host
-  debug:
-    var: hostvars[inventory_hostname]
-    verbosity: 4
-
 - name: create config directory
   file:
-    path: '/home/raymond/.config'
+    path: '{{CONFIG_DIR}}'
     state: directory
     mode: 0755
 
 - name: create aliases directory
   file:
-    path: '/home/raymond/.config/aliases'
+    path: '{{CONFIG_ALIASES}}'
     state: directory
     mode: 0755
 
 - name: create nvim directory
   file:
-    path: '/home/raymond/.config/nvim'
+    path: '{{CONFIG_DIR}}/nvim'
     state: directory
     mode: 0755
 
