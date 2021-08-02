@@ -1,4 +1,4 @@
-name: web-cli
+name: dotfiles-ansible
 root: ~/Development/hetwebbureau/dotfiles-ansible
 
 # Optional tmux socket
