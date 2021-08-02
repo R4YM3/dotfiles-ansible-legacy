@@ -19,10 +19,7 @@
   when: ansible_distribution == 'MacOSX'
 
 - name: vim | create config directory
-  file:
-    path: ~/.config/nvim
-    state: directory
-    mode: 0755
+  shell: mkdir -p ~/.config/nvim
 
 - name: vim | install | .vimrc
   tags: vim, dotfile
