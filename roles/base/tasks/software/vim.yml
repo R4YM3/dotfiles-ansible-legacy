@@ -36,4 +36,4 @@
 
 - name: vim | install | aliases
   tags: vim, aliases
-  file: path=~/.config/aliases/vim state=link src=files/vim/aliases
+  file: 'path={{ALIASES_DIR}}/vim state=link src=files/vim/aliases'

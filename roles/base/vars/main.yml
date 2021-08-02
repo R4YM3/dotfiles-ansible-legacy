@@ -1,0 +1,4 @@
+---
+CONFIG_DIR: "~/.config"
+ALIASES_DIR: '{{CONFIG_DIR}}/aliases'
+TMUXINATOR_DIR: '{{CONFIG_DIR}}/tmuxinator'
