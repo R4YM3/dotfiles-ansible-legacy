@@ -1,0 +1,39 @@
+- name: vim | apt | install
+  tags: vim
+  become: yes
+  package:
+    state: present
+    name:
+      - vim
+      - neovim
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: vim | homebrew | install
+  tags: vim
+  become: no
+  homebrew:
+    state: present
+    name:
+      - vim
+      - neovim
+  when: ansible_distribution == 'MacOSX'
+
+- name: vim | install | .vimrc
+  tags: vim
+  file: path=~/.config/nvim/init.vim state=link src={{role_path}}/files/vim/vimrc
+
+- name: vim | install | plug package manager
+  tags: vim, vim plugins
+  shell: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+- name: vim | install | plugins (run PlugInstall)
+  tags: vim, vim plugins
+  shell: nvim +'PlugInstall --sync' +qa
+
+- name: vim | config | youcompleteme
+  tags: vim, vim plugins
+  shell: python3 ~/.config/nvim/plugged/youcompleteme/install.py --ts-completer
+
+- name: vim | install | aliases
+  tags: vim, aliases
+  file: path=~/.config/vim state=link src={{role_path}}/files/vim/aliases

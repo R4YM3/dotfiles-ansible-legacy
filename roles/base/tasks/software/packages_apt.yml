@@ -17,7 +17,6 @@
       - htop
       - lynx
       - make
-      - neovim
       - nodejs
       - npm
       - openconnect

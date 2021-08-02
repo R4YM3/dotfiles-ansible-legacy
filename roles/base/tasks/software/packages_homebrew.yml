@@ -1,6 +1,6 @@
 - name: homebrew | install | packages
   tags: packages, homebrew
-  become: false
+  become: no
   homebrew:
     state: present
     name:
@@ -16,13 +16,11 @@
       - lynx
       - mono
       - ncdu
-      - neovim
       - node
       - openvpn
       - openconnect
       - python
       - tmux
       - tmuxinator
-      - vim
       - wget
       - zsh
