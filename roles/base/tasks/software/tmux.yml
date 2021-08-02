@@ -1,21 +1,19 @@
 - name: tmux | apt | install
-  tags: tmux, tmuxinator
+  tags: tmux
   become: yes
   package:
     state: present
     name:
       - tmux
-      - tmuxinator
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - name: tmux | homebrew | install
-  tags: tmux, tmuxinator
+  tags: tmux
   become: no
   homebrew:
     state: present
     name:
       - tmux
-      - tmuxinator
   when: ansible_distribution == 'MacOSX'
 
 - name: tmux | install | .tmux.conf

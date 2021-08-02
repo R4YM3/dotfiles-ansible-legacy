@@ -1,0 +1,23 @@
+- name: tmuxinator | apt | install
+  tags: tmux, tmuxinator
+  become: yes
+  package:
+    state: present
+    name:
+      - tmuxinator
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: tmuxinator | homebrew | install
+  tags: tmux, tmuxinator
+  become: no
+  homebrew:
+    state: present
+    name:
+      - tmuxinator
+  when: ansible_distribution == 'MacOSX'
+
+- name: tmux | install | boilerplate projects
+  tags: tmux, .tmux.conf, dotfile
+  copy:
+    src: {{role_path}}/files/tmuxinator/
+    dest: ~/.config/tmuxinator/
