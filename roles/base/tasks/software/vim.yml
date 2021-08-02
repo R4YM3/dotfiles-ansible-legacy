@@ -18,6 +18,9 @@
       - neovim
   when: ansible_distribution == 'MacOSX'
 
+- name: vim | create config directory
+  file: path=~/.config/nvim state=directory mode=0755
+
 - name: vim | install | .vimrc
   tags: vim, dotfile
   copy:
