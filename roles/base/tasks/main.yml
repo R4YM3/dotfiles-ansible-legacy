@@ -7,6 +7,9 @@
 - name: create aliases directory
   shell: mkdir -p ~/.config/aliases
 
+- name: vim | create config dirctory
+  shell: mkdir -p ~/.config/nvim
+
 # software
 - block:
   - import_tasks: software/packages_apt.yml
