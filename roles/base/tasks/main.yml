@@ -6,6 +6,11 @@
 
 - debug: msg="{{ ansible_user_dir }}"
 
+- name: Display all variables/facts known for a host
+  debug:
+    var: hostvars[inventory_hostname]
+    verbosity: 4
+
 - name: create config directory
   file:
     path: '{{ansible_user_dir}}/.config'
