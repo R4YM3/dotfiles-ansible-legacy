@@ -2,16 +2,10 @@
   tags: always
 
 - name: create config directory
-  file:
-    path: /home/raymond/.config
-    state: directory
-    mode: 0755
+  shell: mkdir -p ~/.config
 
 - name: create aliases directory
-  file:
-    path: /home/raymond/.config/aliases
-    state: directory
-    mode: 0755
+  shell: mkdir -p ~/.config/aliases
 
 # software
 - block:

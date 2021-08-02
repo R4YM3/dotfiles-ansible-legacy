@@ -28,7 +28,7 @@
   tags: vim, dotfile
   copy:
     src: vim/vimrc
-    dest: '/home/raymond/.config/nvim/init.vim'
+    dest: '~/.config/nvim/init.vim'
 
 - name: vim | install | plug package manager
   tags: vim, vim plugins
@@ -46,4 +46,4 @@
   tags: vim, aliases
   copy:
     src: files/vim/aliases
-    dest: '/home/raymond/config/aliases/vim'
+    dest: '~/.config/aliases/vim'
