@@ -19,7 +19,10 @@
   when: ansible_distribution == 'MacOSX'
 
 - name: vim | create config directory
-  file: path=~/.config/nvim state=directory mode=0755
+  file:
+    path: ~/.config/nvim
+    state: directory
+    mode: 0755
 
 - name: vim | install | .vimrc
   tags: vim, dotfile
@@ -43,4 +46,4 @@
   tags: vim, aliases
   copy:
     src: files/vim/aliases
-    dest: '{{ALIASES_DIR}}/vim'
+    dest: '~/config/aliases/vim'
