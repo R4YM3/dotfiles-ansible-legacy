@@ -20,7 +20,7 @@
 
 - name: vim | install | .vimrc
   tags: vim, dotfile
-  file: path=~/.config/nvim/init.vim state=link src={{role_path}}/files/vim/vimrc
+  file: path=~/.config/nvim/init.vim state=link src=files/vim/vimrc
 
 - name: vim | install | plug package manager
   tags: vim, vim plugins
@@ -35,5 +35,5 @@
   shell: python3 ~/.config/nvim/plugged/youcompleteme/install.py --ts-completer
 
 - name: vim | install | aliases
-  tags: vim, aliases, dotfile
-  file: path=~/.config/vim state=link src={{role_path}}/files/vim/aliases
+  tags: vim, aliases
+  file: path=~/.config/aliases/vim state=link src=files/vim/aliases
