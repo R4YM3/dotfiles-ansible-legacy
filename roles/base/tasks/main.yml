@@ -2,13 +2,22 @@
   tags: always
 
 - name: create config directory
-  shell: mkdir -p ~/.config
+  file:
+    path: '{{ansible_user_dir}}/.config'
+    state: directory
+    mode: 0755
 
 - name: create aliases directory
-  shell: mkdir -p ~/.config/aliases
+  file:
+    path: '{{ansible_user_dir}}/.config/aliases'
+    state: directory
+    mode: 0755
 
-- name: vim | create config dirctory
-  shell: mkdir -p ~/.config/nvim
+- name: create nvim directory
+  file:
+    path: '{{ansible_user_dir}}/.config/nvim'
+    state: directory
+    mode: 0755
 
 # software
 - block:
