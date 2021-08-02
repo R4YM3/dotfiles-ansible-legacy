@@ -1,4 +1,4 @@
 ---
-CONFIG_DIR: "~/.config"
-ALIASES_DIR: '{{CONFIG_DIR}}/aliases'
-TMUXINATOR_DIR: '{{CONFIG_DIR}}/tmuxinator'
+CONFIG_DIR: '{{HOME_DIR}}/.config'
+ALIASES_DIR: '{{CONFIG_DIR}}/.config'
+NVIM_DIR: '{{CONFIG_DIR}}/nvim'

@@ -15,7 +15,7 @@
 
 - name: create nvim directory
   file:
-    path: '{{NVIM_DIR}}/nvim'
+    path: '{{NVIM_DIR}}'
     state: directory
     mode: 0755
 
