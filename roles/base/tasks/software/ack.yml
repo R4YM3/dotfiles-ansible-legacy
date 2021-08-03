@@ -21,6 +21,6 @@
 - name: ack | install | .ackrc
   tags: ack, .ackrc, dotfile
   copy:
-    src: ack/ackrc
+    src: files/ack/ackrc
     dest: '{{ CONFIG_DIR }}/.ackrc'
     owner: '{{ USER }}'

@@ -23,20 +23,20 @@
 - name: git | install | .gitattributes
   tags: git, .gitattributes, dotfile
   copy:
-    src: git/gitattributes
+    src: files/git/gitattributes
     dest: '{{ CONFIG_DIR }}/.gitattributes'
     owner: '{{ USER }}'
 
 - name: git | install | .gitconfig
   tags: git, .gitconfig, dotfile
   copy:
-    src: git/gitconfig
+    src: files/git/gitconfig
     dest: '{{ CONFIG_DIR }}/.gitconfig'
     owner: '{{ USER }}'
 
 - name: git | install | .gitignore
   tags: git, .gitignore, dotfile
   copy:
-    src: git/gitignore
+    src: files/git/gitignore
     dest: '{{ CONFIG_DIR }}/.gitignore'
     owner: '{{ USER }}'
