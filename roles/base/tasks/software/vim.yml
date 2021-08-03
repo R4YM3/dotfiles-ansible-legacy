@@ -22,17 +22,18 @@
   file:
     path: '{{NVIM_DIR}}'
     state: directory
-    owner: raymond
+    owner: {{ USER }}
 
 - name: vim | install | .vimrc
   tags: vim, dotfile
   copy:
     src: vim/vimrc
     dest: '{{ NVIM_DIR }}/init.vim'
-    owner: raymond
+    owner: {{ USER }}
 
 - name: vim | install | aliases
   tags: vim, aliases
   copy:
     src: files/vim/aliases
     dest: '{{ ALIASES_DIR }}/vim'
+    owner: {{ USER }}

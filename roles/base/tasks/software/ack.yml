@@ -23,4 +23,4 @@
   copy:
     src: ack/ackrc
     dest: '{{ CONFIG_DIR }}/.ackrc'
-    owner: raymond
+    owner: {{ USER }}

@@ -21,9 +21,11 @@
   copy:
     src: files/tmuxinator/
     dest: '{{TMUXINATOR_DIR}}'
+    owner: {{ USER }}
 
 - name: tmuxinator | install | aliases
   tags: tmuxinator, aliases
   copy:
     src: files/tmuxinator/aliases
     dest: '{{ ALIASES_DIR }}/tmuxinator'
+    owner: {{ USER }}

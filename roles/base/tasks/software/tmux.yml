@@ -21,4 +21,4 @@
   copy:
     src: tmux/tmux.conf
     dest: '{{ CONFIG_DIR }}/.tmux.conf'
-    owner: raymond
+    owner: {{ USER }}
