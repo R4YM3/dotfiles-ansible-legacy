@@ -15,6 +15,16 @@
     owner: raymond
     mode: 0755
 
+# utilities
+- import_tasks: software/curl.yml
+- import_tasks: software/git.yml
+- import_tasks: software/ack.yml
+- import_tasks: software/vim.yml
+- import_tasks: software/tmux.yml
+- import_tasks: software/tmuxinator.yml
+
+- import_tasks: software/packages_npm.yml
+
 # software
 - block:
   - import_tasks: software/packages_apt.yml
@@ -25,16 +35,6 @@
   - import_tasks: software/packages_homebrew.yml
   - import_tasks: software/packages_homebrew_cask.yml
   when: ansible_distribution == 'MacOSX'
-
-# utilities
-- import_tasks: software/curl.yml
-- import_tasks: software/git.yml
-- import_tasks: software/ack.yml
-- import_tasks: software/vim.yml
-- import_tasks: software/tmux.yml
-- import_tasks: software/tmuxinator.yml
-
-- import_tasks: software/packages_npm.yml
 
 # desktop enviroments
 - import_tasks: desktop_environments/macos/quicklook.yml
