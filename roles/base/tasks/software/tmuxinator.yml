@@ -26,4 +26,4 @@
   tags: tmuxinator, aliases
   copy:
     src: files/tmuxinator/aliases
-    dest: '{{ ALIASES_DIR }}/tmuxinator
+    dest: '{{ ALIASES_DIR }}/tmuxinator'
