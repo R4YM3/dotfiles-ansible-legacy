@@ -18,4 +18,7 @@
 
 - name: tmux | install | .tmux.conf
   tags: tmux, .tmux.conf, dotfile
-  file: path=~/.tmux.conf state=link src={{role_path}}/files/tmux/tmux.conf
+  copy:
+    src: tmux/tmux.conf
+    dest: '{{ CONFIG_DIR }}/.tmux.conf'
+    owner: raymond
