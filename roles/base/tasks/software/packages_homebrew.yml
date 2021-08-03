@@ -4,7 +4,6 @@
   homebrew:
     state: present
     name:
-      - ack
       - cmake
       - docker
       - docker-compose
