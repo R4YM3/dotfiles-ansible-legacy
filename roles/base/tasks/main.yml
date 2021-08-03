@@ -26,6 +26,8 @@
   - import_tasks: software/packages_homebrew_cask.yml
   when: ansible_distribution == 'MacOSX'
 
+# utilities
+- import_tasks: software/curl.yml
 - import_tasks: software/git.yml
 - import_tasks: software/ack.yml
 - import_tasks: software/vim.yml

@@ -1,0 +1,24 @@
+- name: curl | apt install | pcurlages
+  tags: curl, apt
+  become: yes
+  pcurlage:
+    state: present
+    name:
+      - curl
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: curl | homwbrew install | pcurlages
+  tags: curl, homebrew
+  become: no
+  homebrew:
+    state: present
+    name:
+      - curl
+  when: ansible_distribution == 'MacOSX'
+
+- name: curl | install | .curlrc
+  tags: curl, .curlrc, dotfile
+  copy:
+    src: files/curl/curlrc
+    dest: '{{ HOME_DIR }}/.curlrc'
+    owner: '{{ USER }}'

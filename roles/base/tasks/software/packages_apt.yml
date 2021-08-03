@@ -6,7 +6,6 @@
     name:
       - awscli
       - catimg
-      - curl
       - cmake
       - fonts-firacode
       - fonts-powerline
