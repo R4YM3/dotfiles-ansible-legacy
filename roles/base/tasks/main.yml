@@ -27,6 +27,7 @@
   when: ansible_distribution == 'MacOSX'
 
 - import_tasks: software/git.yml
+- import_tasks: software/ack.yml
 - import_tasks: software/vim.yml
 - import_tasks: software/tmux.yml
 - import_tasks: software/tmuxinator.yml
