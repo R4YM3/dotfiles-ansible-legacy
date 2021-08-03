@@ -23,5 +23,7 @@
     dest: '{{TMUXINATOR_DIR}}'
 
 - name: tmuxinator | install | aliases
-  tags: tmuxinator
-  file: 'path={{ALIASES_DIR}}/tmuxinator state=link src=files/tmuxinator/aliases'
+  tags: tmuxinator, aliases
+  copy:
+    src: files/tmuxinator/aliases
+    dest: '{{ ALIASES_DIR }}/tmuxinator
