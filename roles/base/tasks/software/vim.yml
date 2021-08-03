@@ -49,7 +49,7 @@
 
 - name: vim | install | plugins (run PlugInstall)
   tags: vim, vim plugins
-  shell: nvim +'PlugInstall --sync' +qa
+  shell: nvim +PlugInstall +qall
 
 - name: vim | config | youcompleteme
   tags: vim, vim plugins
