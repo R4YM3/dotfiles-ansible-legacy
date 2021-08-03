@@ -148,7 +148,6 @@ let g:prettier#autoformat = 0
 " every variable in different color
 "
 Plug 'jaxbot/semantic-highlight.vim'
-Plug 'roman/golden-ratio'
 
 call plug#end()
 
