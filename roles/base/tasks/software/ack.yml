@@ -1,0 +1,26 @@
+- name: ack | apt install | packages
+  tags: ack, apt
+  become: yes
+  package:
+    state: present
+    name:
+      - ack
+      - ack-grep
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: ack | homwbrew install | packages
+  tags: ack, homebrew
+  become: no
+  homebrew:
+    state: present
+    name:
+      - ack
+      - ack-grep
+  when: ansible_distribution == 'MacOSX'
+
+- name: ack | install | .ackrc
+  tags: ack, .ackrc, dotfile
+  copy:
+    src: ack/ackrc
+    dest: '{{ CONFIG_DIR }}/.ackrc'
+    owner: raymond

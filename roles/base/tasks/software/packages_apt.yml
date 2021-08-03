@@ -4,16 +4,12 @@
   package:
     state: present
     name:
-      - ack-grep
       - awscli
       - catimg
       - curl
       - cmake
       - fonts-firacode
       - fonts-powerline
-      - git
-      - git-all
-      - git-crypt
       - htop
       - lynx
       - make

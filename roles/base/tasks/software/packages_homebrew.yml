@@ -9,7 +9,6 @@
       - docker
       - docker-compose
       - ffmpeg
-      - git
       - go
       - htop
       - lolcat
