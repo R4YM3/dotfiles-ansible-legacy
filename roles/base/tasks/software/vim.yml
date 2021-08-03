@@ -45,7 +45,8 @@
 
 - name: vim | install | plugins (run PlugInstall)
   tags: vim, vim plugins
-  command: 'nvim -E -s -u "{{NVIM_DIR}}/init.vim" +PlugInstall +qall'
+  command: nvim +'PlugInstall --sync' +qa
+
   become_user: raymond
   #command:
   #  cmd: nvim -c "PlugInstall" -c ":qa!"
