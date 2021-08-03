@@ -1,20 +1,10 @@
-- name: tmuxinator | apt | install
+- name: tmuxinator | install
   tags: tmuxinator
-  become: yes
+  become: "{{ ansible_distribution != 'MacOSX' }}"
   package:
     state: present
     name:
       - tmuxinator
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-
-- name: tmuxinator | homebrew | install
-  tags: tmuxinator
-  become: no
-  homebrew:
-    state: present
-    name:
-      - tmuxinator
-  when: ansible_distribution == 'MacOSX'
 
 - name: tmuxinator | install | boilerplate projects
   tags: tmuxinator

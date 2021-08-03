@@ -1,24 +1,12 @@
-- name: git | apt install | packages
-  tags: git, apt
-  become: yes
+- name: git | install | packages
+  tags: git
+  become: "{{ ansible_distribution != 'MacOSX' }}"
   package:
     state: present
     name:
       - git
       - git-all
       - git-crypt
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-
-- name: git | homwbrew install | packages
-  tags: git, homebrew
-  become: no
-  homebrew:
-    state: present
-    name:
-      - git
-      - git-all
-      - git-crypt
-  when: ansible_distribution == 'MacOSX'
 
 - name: git | install | .gitattributes
   tags: git, .gitattributes, dotfile
