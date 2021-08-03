@@ -22,7 +22,8 @@
   file:
     path: '{{NVIM_DIR}}'
     state: directory
-    owner: raymond
+    owner: "{{ ansible_effective_user_id }}"
+    group: "{{ ansible_effective_group_id }}"
 
 - name: vim | install | .vimrc
   tags: vim, dotfile
@@ -35,7 +36,8 @@
   file:
     path: '{{NVIM_DIR}}/autoload'
     state: directory
-    owner: raymond
+    owner: "{{ ansible_effective_user_id }}"
+    group: "{{ ansible_effective_group_id }}"
 
 - name: Install vim-plugb
   #shell: 'curl -fLo {{HOME_DIR}}/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

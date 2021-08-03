@@ -5,17 +5,15 @@
   file:
     path: '{{ CONFIG_DIR }}'
     state: directory
-    owner: raymond
-    group: raymond
-    mode: 0755
+    owner: "{{ ansible_effective_user_id }}"
+    group: "{{ ansible_effective_group_id }}"
 
 - name: create aliases directory
   file:
     path: '{{ALIASES_DIR}}'
     state: directory
-    owner: raymond
-    group: raymond
-    mode: 0755
+    owner: "{{ ansible_effective_user_id }}"
+    group: "{{ ansible_effective_group_id }}"
 
 # software
 - block:
