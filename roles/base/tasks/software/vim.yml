@@ -29,6 +29,7 @@
   copy:
     src: vim/vimrc
     dest: '{{ NVIM_DIR }}/init.vim'
+    owner: raymond
 
 
 - name: create nvim autoload directory
