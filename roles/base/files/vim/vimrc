@@ -152,4 +152,3 @@ Plug 'roman/golden-ratio'
 
 call plug#end()
 
-colorscheme dracula
