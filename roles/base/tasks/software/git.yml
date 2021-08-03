@@ -30,7 +30,7 @@
 - name: git | install | .gitconfig
   tags: git, .gitconfig, dotfile
   copy:
-    src: git/gitignore
+    src: git/gitconfig
     dest: '{{ CONFIG_DIR }}/.gitconfig'
     owner: raymond
 
