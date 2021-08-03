@@ -24,19 +24,19 @@
   tags: git, .gitattributes, dotfile
   copy:
     src: files/git/gitattributes
-    dest: '{{ CONFIG_DIR }}/.gitattributes'
+    dest: '{{ HOME_DIR }}/.gitattributes'
     owner: '{{ USER }}'
 
 - name: git | install | .gitconfig
   tags: git, .gitconfig, dotfile
   copy:
     src: files/git/gitconfig
-    dest: '{{ CONFIG_DIR }}/.gitconfig'
+    dest: '{{ HOME_DIR }}/.gitconfig'
     owner: '{{ USER }}'
 
 - name: git | install | .gitignore
   tags: git, .gitignore, dotfile
   copy:
     src: files/git/gitignore
-    dest: '{{ CONFIG_DIR }}/.gitignore'
+    dest: '{{ HOME_DIR }}/.gitignore'
     owner: '{{ USER }}'
