@@ -24,6 +24,9 @@
 - import_tasks: utilities/tmuxinator.yml
 - import_tasks: utilities/packages_npm.yml
 
+# projects
+- import_tasks: projects/hetwebbureau.yml
+
 # software
 - block:
   - import_tasks: software/packages_apt.yml
