@@ -1,0 +1,6 @@
+source ~/.aliases.zsh
+source ~/.exports.zsh
+source ~/.functions.zsh
+source ~/.zsh/plugins.zsh
+source ~/.preferences.zsh
+source $ZSH/oh-my-zsh.sh
