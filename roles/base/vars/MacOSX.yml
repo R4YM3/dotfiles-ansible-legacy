@@ -1,3 +1,4 @@
+# ? USER: janeway
 HOME_DIR: /Users/voyager
 CONFIG_DIR: '{{HOME_DIR}}/.config'
 ALIASES_DIR: '{{CONFIG_DIR}}/aliases'
@@ -5,3 +6,4 @@ NVIM_DIR: '{{CONFIG_DIR}}/nvim'
 TMUXINATOR_DIR: '{{CONFIG_DIR}}/tmuxinator'
 DEVELOPMENT_DIR: '~/Development'
 HETWEBBUREAU_DIR: '{{DEVELOPMENT_DIR}}/hetwebbureau'
+ZSH_DIR: '{{HOME_DIR}}/.config/zsh'

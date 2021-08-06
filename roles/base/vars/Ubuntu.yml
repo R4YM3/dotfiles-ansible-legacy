@@ -1,8 +1,9 @@
 USER: raymond
-HOME_DIR: /home/raymond
+HOME_DIR: '/home/{{USER}}'
 CONFIG_DIR: '{{HOME_DIR}}/.config'
 ALIASES_DIR: '{{CONFIG_DIR}}/aliases'
 NVIM_DIR: '{{CONFIG_DIR}}/nvim'
 TMUXINATOR_DIR: '{{CONFIG_DIR}}/tmuxinator'
 DEVELOPMENT_DIR: '~/Development'
 HETWEBBUREAU_DIR: '{{DEVELOPMENT_DIR}}/hetwebbureau'
+ZSH_DIR: '{{HOME_DIR}}/.config/zsh'
