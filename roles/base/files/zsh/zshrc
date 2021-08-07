@@ -2,6 +2,6 @@ echo "LOADED"
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/exports.zsh
 source ~/.config/zsh/functions.zsh
-source ~/.config/zsh/zsh/plugins.zsh
+source ~/.config/zsh/plugins.zsh
 source ~/.config/zsh/preferences.zsh
 #source $ZSH/oh-my-zsh.sh
