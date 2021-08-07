@@ -1,0 +1,11 @@
+- name: terminal | theme | clone dracula theme
+  tags: terminal, theme, dracula
+  git:
+    repo: https://github.com/dracula/gnome-terminal.git
+    dest: '{{ TERMINAL_THEMES_DIR }}/dracula'
+    clone: yes
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: terminal | install dracula theme
+  shell: 'cd {{ TERMINAL_THEMES_DIR }}/dracula/gnome-terminal && ./install.sh -s Dracula -p Default --install-dircolors'
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'

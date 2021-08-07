@@ -26,12 +26,13 @@
 - import_tasks: utilities/zsh.yml
 
 # projects
-- import_tasks: projects/hetwebbureau.yml
+# - import_tasks: projects/hetwebbureau.yml
 
 # software
 - block:
   - import_tasks: software/packages_apt.yml
   - import_tasks: software/packages_snap.yml
+  - import_tasks: software/terminal.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - block:
