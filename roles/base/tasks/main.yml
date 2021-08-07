@@ -12,7 +12,7 @@
 - name: Setting host facts using complex arguments
   set_fact:
     USER: '{{ whoami.stdout }}'
-    HOMER_DIR: '/home/{{ USER }}'
+    HOMER_DIR: '/home/{{ whoami.stdout }}'
 
 - debug:
     msg: "USER={{USER}}"
