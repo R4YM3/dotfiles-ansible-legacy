@@ -3,7 +3,7 @@
 
 - name: Register current user name via whoami
   become: false
-  local_action: command echo whoami
+  shell: echo whoami
   register: whoami
   tags:
   - global
