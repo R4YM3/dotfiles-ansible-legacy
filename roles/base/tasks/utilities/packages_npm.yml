@@ -10,32 +10,32 @@
   npm:
     state: present
     global: yes
-    name: eslint
+    name: grunt
 
 - name: npm | install | gulp
   tags: packages, npm
   npm:
     state: present
     global: yes
-    name: eslint
+    name: gulp
 
 - name: npm | install | gtop
   tags: packages, npm
   npm:
     state: present
     global: yes
-    name: eslint
+    name: gtop
 
 - name: npm | install | http-server
   tags: packages, npm
   npm:
     state: present
     global: yes
-    name: eslint
+    name: http-server
 
 - name: npm | install | nodemon
   tags: packages, npm
   npm:
     state: present
     global: yes
-    name: eslint
+    name: nodemon
