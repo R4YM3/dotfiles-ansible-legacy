@@ -1,10 +1,10 @@
 - name: dotfiles | repository | clone
-    tags: repository, clone
-    git:
-      repo: git@github.com:R4YM3/dotfiles.git
-      dest: '{{ HETWEBBUREAU_DIR }}/dotfiles'
-      clone: yes
-      key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
+  tags: repository, clone
+  git:
+    repo: git@github.com:R4YM3/dotfiles.git
+    dest: '{{ HETWEBBUREAU_DIR }}/dotfiles'
+    clone: yes
+    key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
 
 - name: dotfiles-ansible | repository | clone
   tags: repository, clone
