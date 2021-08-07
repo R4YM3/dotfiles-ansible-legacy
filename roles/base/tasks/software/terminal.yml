@@ -6,6 +6,7 @@
     clone: yes
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
-- name: terminal | install dracula theme
-  shell: 'cd {{ TERMINAL_THEMES_DIR }}/dracula && ./install.sh -s Dracula -p Default --install-dircolors'
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+# https://github.com/dracula/gnome-terminal/issues/11
+# - name: terminal | install dracula theme
+#  shell: 'cd {{ TERMINAL_THEMES_DIR }}/dracula && ./install.sh -s Dracula -p Default --install-dircolors'
+#  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
