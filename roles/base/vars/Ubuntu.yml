@@ -1,5 +1,3 @@
-USER: raymond
-HOME_DIR: '/home/{{USER}}'
 CONFIG_DIR: '{{HOME_DIR}}/.config'
 ALIASES_DIR: '{{CONFIG_DIR}}/aliases'
 NVIM_DIR: '{{CONFIG_DIR}}/nvim'
