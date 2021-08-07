@@ -48,7 +48,6 @@
 - name: zsh | dotfiles
   tags: zsh
   copy: src={{ item.src }} dest={{ item.dest }}
-  owner: '{{ USER }}'
   with_items:
     - { src: 'files/zsh/zshrc', dest: '{{ CONFIG_DIR }}/.zshrc' }
     - { src: 'files/zsh/aliases', dest: '{{ ZSH_DIR }}/.aliases' }
