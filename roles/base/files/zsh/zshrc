@@ -1,4 +1,3 @@
-echo "LOADED"
 source ~/.config/zsh/exports.zsh
 source ~/.config/zsh/functions.zsh
 source ~/.config/zsh/preferences.zsh
