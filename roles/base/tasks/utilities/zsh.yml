@@ -50,7 +50,7 @@
   tags: zsh
   copy:
     src: "{{ item }}"
-    dest: "{{ ZSH_DIR }}/zsh/"
+    dest: "{{ ZSH_DIR }}"
     owner: '{{ USER }}'
   with_fileglob:
     - zsh/config/*
