@@ -1,13 +1,16 @@
 - include_vars: "{{ ansible_distribution }}.yml"
   tags: always
 
-- name: Register current user name
+- name: Register current user name via whoami
   become: false
   local_action: command whoami
-  register: USER
+  register: whoami
   tags:
   - global
   - user
+
+- set_fact:
+  USER: "{{ whoami.stdout }}"
 
 - name: Register current user name homedir
   become: false
