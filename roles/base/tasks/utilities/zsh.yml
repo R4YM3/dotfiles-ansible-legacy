@@ -30,7 +30,7 @@
 
 - name: zsh | check if .oh-my-zsh exists
   stat:
-    path: ~/.oh-my-zsh
+    path: '{{ OH_MY_ZSH_DIR }}'
   register: stat_oh_my_zsh_result
 
 - name: zsh | clone oh-my-zsh
