@@ -39,20 +39,18 @@
     dest=~/.oh-my-zsh
   when: not stat_oh_my_zsh_result.stat.exists
 
-#- name: Creating new ~/.zshrc
-#  copy:
-#    src=~/.oh-my-zsh/templates/zshrc.zsh-template
-#    dest=~/.zshrc
-#  when: not stat_rc_result.stat.exists
-
-- name: zsh | dotfiles
+- name: zsh | copy zshrc
   tags: zsh
-  copy: src={{ item.src }} dest={{ item.dest }}
-  with_items:
-    - { src: 'files/zsh/zshrc', dest: '{{ CONFIG_DIR }}/.zshrc' }
-    - { src: 'files/zsh/aliases', dest: '{{ ZSH_DIR }}/.aliases' }
-    - { src: 'files/zsh/exports', dest: '{{ ZSH_DIR }}/.exports' }
-    - { src: 'files/zsh/functions', dest: '{{ ZSH_DIR }}/.functions' }
-    - { src: 'files/zsh/plugins', dest: '{{ ZSH_DIR }}/.plugins' }
-    - { src: 'files/zsh/preferences', dest: '{{ ZSH_DIR }}/.preferences' }
-  when: not stat_rc_result.stat.exists
+  copy:
+    src: zsh/zshrc
+    dest: '{{ HOM_DIR }}/.zshrc'
+    owner: '{{ USER }}'
+
+- name: zsh | copy config
+  tags: zsh
+  copy:
+    src: "{{ item }}"
+    dest: "{{ ZSH_DIR }}/zsh/"
+    owner: '{{ USER }}'
+  with_fileglob:
+    - zsh/config/*
