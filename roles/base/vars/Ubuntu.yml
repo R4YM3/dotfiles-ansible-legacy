@@ -7,3 +7,5 @@ TMUXINATOR_DIR: '{{CONFIG_DIR}}/tmuxinator'
 DEVELOPMENT_DIR: '~/Development'
 HETWEBBUREAU_DIR: '{{DEVELOPMENT_DIR}}/hetwebbureau'
 ZSH_DIR: '{{HOME_DIR}}/.config/zsh'
+OHMYZSH_DIR: '{{HOME_DIR}}/.oh-my-zsh'
+

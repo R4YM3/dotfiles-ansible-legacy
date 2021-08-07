@@ -33,10 +33,12 @@
     path: ~/.oh-my-zsh
   register: stat_oh_my_zsh_result
 
-- name: zsh | cloning oh-my-zsh
+- name: zsh | clone oh-my-zsh
+  tags: zsh, oh-my-zsh
   git:
-    repo=https://github.com/robbyrussell/oh-my-zsh
-    dest=~/.oh-my-zsh
+    repo: https://github.com/robbyrussell/oh-my-zsh
+    dest: '{{ OHMYZSH_DIR }}'
+    clone: yes
   when: not stat_oh_my_zsh_result.stat.exists
 
 - name: zsh | copy zshrc
