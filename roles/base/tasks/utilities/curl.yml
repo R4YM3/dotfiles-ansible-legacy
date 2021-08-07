@@ -2,7 +2,7 @@
 - name: curl | install
   tags: curl
   become: '{{ ansible_distribution != "MacOSX" }}'
-  pcurlage:
+  package:
     state: present
     name: curl
 
