@@ -3,7 +3,7 @@
 
 - name: Register current user name via whoami
   become: false
-  shell: echo $(whoami)
+  local_action: command whoami
   register: whoami
   tags:
   - global
@@ -12,21 +12,13 @@
 - name: Setting host facts using complex arguments
   set_fact:
     USER: '{{ whoami.stdout }}'
+    HOMER_DIR: '/home/{{ USER }}'
 
 - debug:
     msg: "USER={{USER}}"
 
-- name: Register current user name homedir
-  become: false
-  local_action: '/home/{{ USER }}'
-  register: HOME_DIR
-  tags:
-  - global
-  - user
-
 - debug:
     msg: "HOMED_DIR={{HOME_DIR}}"
-
 
 - name: create config directory
   file:
