@@ -1,10 +1,9 @@
 - name: curl | install
   tags: curl
-  become: "{{ ansible_distribution != 'MacOSX' }}"
+  become: '{{ ansible_distribution != "MacOSX" }}'
   pcurlage:
     state: present
-    name:
-      - curl
+    name: curl
 
 - name: curl | install | .curlrc
   tags: curl, .curlrc, dotfile

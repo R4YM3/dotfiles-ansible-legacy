@@ -16,7 +16,7 @@
     mode: 0755
 
 # utilities
-# - import_tasks: utilities/curl.yml
+- import_tasks: utilities/curl.yml
 - import_tasks: utilities/git.yml
 - import_tasks: utilities/ack.yml
 - import_tasks: utilities/vim.yml
