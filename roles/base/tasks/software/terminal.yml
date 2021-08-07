@@ -6,7 +6,18 @@
     clone: yes
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
+- name: terminal | make new default profile
+  shell: >
+    profile_id="$(uuidgen)"
+    dconf write $dconfdir/default "'$profile_id'"
+    dconf write $dconfdir/list "['$profile_id']"
+    profile_dir="$dconfdir/:$profile_id"
+    dconf write $profile_dir/visible-name "'Default'"
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
 # https://github.com/dracula/gnome-terminal/issues/11
-# - name: terminal | install dracula theme
-#  shell: 'cd {{ TERMINAL_THEMES_DIR }}/dracula && ./install.sh -s Dracula -p Default --install-dircolors'
-#  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+- name: terminal | install dracula theme
+  shell: >
+    'cd {{ TERMINAL_THEMES_DIR }}/dracula
+    && ./install.sh -s Dracula -p Default --install-dircolors'
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
