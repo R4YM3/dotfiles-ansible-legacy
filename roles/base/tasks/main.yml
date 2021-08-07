@@ -15,12 +15,6 @@
     USER: '{{ whoami.stdout }}'
     HOME_DIR: '/home/{{ whoami.stdout }}'
 
-- debug:
-    msg: "USER={{USER}}"
-
-- debug:
-    msg: "HOME_DIR={{HOME_DIR}}"
-
 - name: create config directory
   file:
     path: '{{ CONFIG_DIR }}'
