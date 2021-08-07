@@ -22,3 +22,22 @@
     && ./install.sh -s Dracula -p Default --install-dircolors'
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
+- name: Terminal hide menubar
+  dconf:
+    key: '/org/gnome/terminal/legacy/default-show-menubar'
+    value: 'false'
+
+- name: Terminal hide scrollbar
+  dconf:
+    key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/scrollbar-policy'
+    value: "'never'"
+
+- name: Set terminal font to firacode
+  dconf:
+    key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/font'
+    value: "'Fira Code weight=453 12'"
+
+- name: Set terminal font to firacode
+  dconf:
+    key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-system-font'
+    value: 'false'
