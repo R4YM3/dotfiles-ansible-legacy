@@ -36,8 +36,8 @@
 - name: zsh | clone oh-my-zsh
   tags: zsh, oh-my-zsh
   git:
-    repo: https://github.com/robbyrussell/oh-my-zsh
-    dest: '{{ OHMYZSH_DIR }}'
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: '{{ OH_MY_ZSH_DIR }}'
     clone: yes
   when: not stat_oh_my_zsh_result.stat.exists
 
