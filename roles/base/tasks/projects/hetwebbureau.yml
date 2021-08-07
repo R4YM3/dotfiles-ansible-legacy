@@ -1,59 +1,47 @@
- - name: dotfiles | repository | clone
+- name: dotfiles | repository | clone
    tags: repository, clone
    git:
      repo: git@github.com:R4YM3/dotfiles.git
-     version: master
      dest: '{{ HETWEBBUREAU_DIR }}/dotfiles'
      clone: yes
      key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
-     become_user: '{{ USER }}'
 
  - name: dotfiles-ansible | repository | clone
    tags: repository, clone
    git:
      repo: git@github.com:R4YM3/dotfiles-ansible.git
-     version: main
      dest: '{{ HETWEBBUREAU_DIR }}/dotfiles-ansible'
      clone: yes
      key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
-     become_user: '{{ USER }}'
 
  - name: webcli | repository | clone
    tags: repository, clone
    git:
      repo: git@github.com:R4YM3/webcli.git
-     version: master
      dest: '{{ HETWEBBUREAU_DIR }}/webcli'
      clone: yes
      key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
-     become_user: '{{ USER }}'
 
  - name: webcli-interpreter | repository | clone
    tags: repository, clone
    git:
      repo: git@github.com:R4YM3/webcli-interpreter.git
-     version: master
      dest: '{{ HETWEBBUREAU_DIR }}/webcli-interpreter'
      clone: yes
      key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
-     become_user: '{{ USER }}'
 
  - name: webcli-todo | repository | clone
    tags: repository, clone
    git:
      repo: git@github.com:R4YM3/webcli-todo.git
-     version: master
      dest: '{{ HETWEBBUREAU_DIR }}/webcli-todo'
      clone: yes
      key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
-     become_user: '{{ USER }}'
 
  - name: react-cli | repository | clone
    tags: repository, clone
    git:
      repo: git@github.com:R4YM3/react-cli.git
-     version: master
      dest: '{{ HETWEBBUREAU_DIR }}/react-cli'
      clone: yes
      key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
-     become_user: '{{ USER }}'
