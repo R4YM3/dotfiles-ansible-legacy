@@ -52,5 +52,6 @@
     src: "{{ item }}"
     dest: "{{ ZSH_DIR }}"
     owner: '{{ USER }}'
+    mode: u+x
   with_fileglob:
     - zsh/config/*
