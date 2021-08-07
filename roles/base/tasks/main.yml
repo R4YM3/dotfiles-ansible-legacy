@@ -2,20 +2,20 @@
   tags: always
 
 - name: Register current user name
-   become: false
-   local_action: command whoami
-   register: USER
-   tags:
-   - global
-   - user
+  become: false
+  local_action: command whoami
+  register: USER
+  tags:
+  - global
+  - user
 
 - name: Register current user name homedir
-   become: false
-   local_action: '/home/{{ USER }}'
-   register: HOME_DIR
-   tags:
-   - global
-   - user
+  become: false
+  local_action: '/home/{{ USER }}'
+  register: HOME_DIR
+  tags:
+  - global
+  - user
 
 - name: create config directory
   file:
