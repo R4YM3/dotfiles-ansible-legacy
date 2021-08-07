@@ -9,8 +9,9 @@
   - global
   - user
 
-- set_fact:
-  USER: "{{ whoami.stdout }}"
+- name: Setting host facts using complex arguments
+  set_fact:
+    USER: '{{ whoami.stdout }}'
 
 - name: Register current user name homedir
   become: false
