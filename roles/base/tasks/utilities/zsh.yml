@@ -13,7 +13,7 @@
   user:
     name: '{{ USER }}'
     shell: "chsh -s /usr/local/bin/zsh"
-  when : "{{ ansible_distribution == 'MacOSX' }}"
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - name: zsh | not MacOS | set as default
   tags: zsh
@@ -21,7 +21,7 @@
   user:
     name: '{{ USER }}'
     shell: /bin/zsh
-  when : "{{ ansible_distribution != 'MacOSX' }}"
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - name: zsh | check if .zshrc exists
   stat:
