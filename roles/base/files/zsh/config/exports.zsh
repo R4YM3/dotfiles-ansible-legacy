@@ -41,5 +41,5 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
-# nvm install folder
-export NVM_DIR="$HOME/.nvm"
+# auto use nvm
+export NVM_AUTO_USE=true
