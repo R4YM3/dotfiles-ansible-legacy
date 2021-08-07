@@ -13,16 +13,20 @@
   set_fact:
     USER: '{{ whoami.stdout }}'
 
+- debug:
+    msg: "USER={{USER}}"
+
 - name: Register current user name homedir
   become: false
-  local_action: '/home/$({{ USER }})'
+  local_action: '/home/{{ USER }}'
   register: HOME_DIR
   tags:
   - global
   - user
 
 - debug:
-    msg: "USER={{USER}} and HOMED_DIR={{HOME_DIR}}"
+    msg: "HOMED_DIR={{HOME_DIR}}"
+
 
 - name: create config directory
   file:
