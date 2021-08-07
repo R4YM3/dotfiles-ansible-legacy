@@ -1,3 +1,4 @@
+---
 - name: curl | install
   tags: curl
   become: '{{ ansible_distribution != "MacOSX" }}'
