@@ -1,5 +1,3 @@
-# https://github.com/gantsign/ansible-role-oh-my-zsh/blob/master/tasks/install.yml
----
 - name: zsh | apt | install zsh and dependecies
   tags: zsh
   become: "{{ ansible_distribution != 'MacOSX' }}"
