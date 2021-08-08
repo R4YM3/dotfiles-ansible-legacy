@@ -15,14 +15,16 @@
 # projects
 # - import_tasks: projects/hetwebbureau.yml
 
+- import_tasks: software/packages.yml
+
 - block:
-  - import_tasks: software/packages_apt.yml
-  - import_tasks: software/packages_snap.yml
+  - import_tasks: software/apt.yml
+  - import_tasks: software/snap.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - block:
-  - import_tasks: software/packages_homebrew.yml
-  - import_tasks: software/packages_homebrew_cask.yml
+  - import_tasks: software/homebrew.yml
+  - import_tasks: software/homebrew_cask.yml
   when: ansible_distribution == 'MacOSX'
 
 - block:
