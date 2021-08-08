@@ -55,5 +55,10 @@
   when: ansible_distribution == 'MacOSX'
 
 # desktop enviroments
-- import_tasks: desktop_environments/macos/quicklook.yml
+- block:
+  - import_tasks: desktop_environments/gnome/keyboard.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- block:
+  - import_tasks: desktop_environments/macos/quicklook.yml
   when: ansible_distribution == 'MacOSX'
