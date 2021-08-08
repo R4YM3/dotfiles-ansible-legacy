@@ -9,6 +9,7 @@ if [ -f "/etc/debian_version" ]; then
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
     sudo apt --fix-broken install -y
+    sudo dpkg --configure -a
 
     sudo apt update -y
     sudo apt upgrade -y
