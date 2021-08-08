@@ -5,7 +5,7 @@
     dest: '{{ TERMINAL_THEMES_DIR }}/dracula'
     clone: yes
     #  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  when: 'SKIP'
+  when: 'INSTALL_TERMINAL_THEME'
 
 - name: gnome | terminal | make new default profile
   tags: gnome, terminal, theme
@@ -16,7 +16,7 @@
     profile_dir="$dconfdir/:$profile_id"
     dconf write $profile_dir/visible-name "'Default'"
   #when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  when: 'SKIP'
+  when: 'INSTALL_TERMINAL_THEME'
 
 # https://github.com/dracula/gnome-terminal/issues/11
 - name: gnome | terminal | install dracula theme
@@ -26,7 +26,7 @@
     'cd {{ TERMINAL_THEMES_DIR }}/dracula
     && ./install.sh -s Dracula -p Default --install-dircolors'
   # when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  when: 'SKIP'
+  when: 'INSTALL_TERMINAL_THEME'
 
 - name: gnome | terminal | hide menubar
   tags: gnome, terminal
