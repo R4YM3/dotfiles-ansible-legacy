@@ -1,6 +1,6 @@
 - name: apt | install | packages
   tags: packages, apt
-  become: yes
+  become: "{{ ansible_distribution != 'MacOSX' }}"
   package:
     state: present
     name:
