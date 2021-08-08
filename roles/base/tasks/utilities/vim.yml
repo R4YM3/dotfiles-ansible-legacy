@@ -20,6 +20,13 @@
     dest: '{{ NVIM_DIR }}/init.vim'
     owner: '{{ USER }}'
 
+- name: vim | install | .ctags
+  tags: vim, dotfile, ctags
+  copy:
+    src: vim/ctags
+    dest: '{{ HOME_DIR }}/init.vim'
+    owner: '{{ USER }}'
+
 - name: vim | install | aliases
   tags: vim, aliases
   copy:
