@@ -2,40 +2,14 @@
   include_vars: "base.yml"
   tags: always
 
-- name: Register current user name via whoami
-  become: false
-  local_action: command whoami
-  register: whoami
-  tags:
-  - global
-  - user
-
-- name: Setting host facts using complex arguments
-  set_fact:
-    USER: '{{ whoami.stdout }}'
-    HOME_DIR: '/home/{{ whoami.stdout }}'
-
-- name: create config directory
-  file:
-    path: '{{ CONFIG_DIR }}'
-    state: directory
-    owner: '{{ USER }}'
-    mode: 0755
-
-- name: create aliases directory
-  file:
-    path: '{{ALIASES_DIR}}'
-    state: directory
-    owner: '{{ USER }}'
-    mode: 0755
-
+- import_tasks: utilities/ack.yml
 - import_tasks: utilities/curl.yml
 - import_tasks: utilities/git.yml
-- import_tasks: utilities/ack.yml
-- import_tasks: utilities/vim.yml
 - import_tasks: utilities/tmux.yml
 - import_tasks: utilities/tmuxinator.yml
+- import_tasks: utilities/vim.yml
 - import_tasks: utilities/packages_npm.yml
+- import_tasks: utilities/wget.yml
 - import_tasks: utilities/zsh.yml
 
 # projects
