@@ -14,7 +14,7 @@
   - name: vars | set global variables
     set_fact:
       USER: '{{ whoami.stdout }}'
-      HOME_DIR: '~',
+      HOME_DIR: '~'
       CONFIG_DIR: '~/.config'
       ALIASES_DIR: '~/.config/aliases'
 
