@@ -1,0 +1,9 @@
+- name: Keyboard delay
+  dconf:
+    key: '/org/gnome/desktop/peripherals/keyboard/delay'
+    value: 'uint32 250'
+
+- name: Keboard repeat interval
+  dconf:
+    key: '/org/gnome/desktop/peripherals/keyboard/repeat-interval'
+    value: 'uint32 30'
