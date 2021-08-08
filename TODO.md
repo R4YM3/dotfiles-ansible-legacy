@@ -7,6 +7,7 @@ All:
 - refactor: move .config/aliases into .config/zsh/aliases/
 - fix: setup YCMserver (typescript) on vim :PlugInstall
 - refactor: refactor USER var
+- feat: lutris
 
 Debian:
 - fix: gnome-terminal dracula theme install
