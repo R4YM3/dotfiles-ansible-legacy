@@ -75,9 +75,7 @@
 - name: zsh | copy config
   tags: zsh
   copy:
-    src: "{{ item }}"
+    src: zsh/config
     dest: "{{ ZSH_DIR }}"
     owner: '{{ USER }}'
     mode: u+x
-  with_fileglob:
-    - zsh/config/*
