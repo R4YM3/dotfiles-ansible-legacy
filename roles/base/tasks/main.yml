@@ -53,10 +53,11 @@
 
 - block:
   - import_tasks: desktop_environments/gnome/appearance.yml
-  - import_tasks: desktop_environments/gnome/keyboard.yml
   - import_tasks: desktop_environments/gnome/cursor.yml
-  - import_tasks: desktop_environments/gnome/power.yml
+  - import_tasks: desktop_environments/gnome/keyboard.yml
   - import_tasks: desktop_environments/gnome/night-light.yml
+  - import_tasks: desktop_environments/gnome/packages.yml
+  - import_tasks: desktop_environments/gnome/power.yml
   - import_tasks: desktop_environments/gnome/screen.yml
   - import_tasks: desktop_environments/gnome/terminal.yml
   - import_tasks: desktop_environments/gnome/tracker.yml
