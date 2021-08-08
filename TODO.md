@@ -8,6 +8,7 @@ All:
 - fix: setup YCMserver (typescript) on vim :PlugInstall
 - refactor: refactor USER var
 - feat: lutris
+- removed 'press [enter] on ansible install' in install.sh
 
 Debian:
 - fix: gnome-terminal dracula theme install
