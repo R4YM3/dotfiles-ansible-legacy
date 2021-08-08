@@ -33,7 +33,7 @@
     key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-battery-timeout"
     value: "1500"
 
-  - name: gnome | power | disable screen dim
-    community.general.dconf:
-      key: '/org/gnome/settings-daemon/plugins/power/idle-dim'
-      value: 'false'
+- name: gnome | power | disable screen dim
+  community.general.dconf:
+    key: '/org/gnome/settings-daemon/plugins/power/idle-dim'
+    value: 'false'
