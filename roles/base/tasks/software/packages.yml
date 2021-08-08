@@ -4,6 +4,7 @@
   package:
     state: present
     name:
+      - 1password
       - awscli
       - catimg
       - cmake
@@ -11,10 +12,13 @@
       - fonts-powerline
       - htop
       - lynx
+      - lolcat
       - make
-      - nodejs
       - npm
       - openconnect
       - powerline
       - python3
       - zsh
+      - postman
+
+

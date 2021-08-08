@@ -24,3 +24,5 @@
       - chromium
       - gitkraken
       - icloud-for-linux
+      - slack
+      - teams-for-linux

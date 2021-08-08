@@ -4,19 +4,10 @@
   homebrew:
     state: present
     name:
-      - cmake
       - docker
       - docker-compose
       - ffmpeg
-      - go
-      - htop
-      - lolcat
-      - lynx
       - mono
       - ncdu
       - node
-      - openvpn
-      - openconnect
-      - python
       - wget
-      - zsh
