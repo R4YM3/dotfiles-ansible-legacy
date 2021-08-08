@@ -15,6 +15,7 @@ if [ -f "/etc/debian_version" ]; then
     sudo apt full-upgrade -y
     sudo apt autoremove -y
 
+    sudo apt install git -y
     sudo apt install python3 -y
     sudo apt install software-properties-common
 
