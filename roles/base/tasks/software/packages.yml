@@ -4,7 +4,6 @@
   package:
     state: present
     name:
-      - 1password
       - awscli
       - catimg
       - cmake

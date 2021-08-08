@@ -4,6 +4,7 @@
   homebrew:
     state: present
     name:
+      - 1password
       - cyberduck
       - firefox
       - gitkraken

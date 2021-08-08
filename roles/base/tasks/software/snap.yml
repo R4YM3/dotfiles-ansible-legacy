@@ -19,6 +19,7 @@
     classic: yes
     state: present
     name:
+      - 1password
       - beekeeper-studio
       # - code
       - chromium
