@@ -1,0 +1,21 @@
+- name: apt | install | packages
+  tags: packages, apt
+  become: yes
+  package:
+    state: present
+    name:
+      - nodejs
+      - npm
+
+- name: npm | install packages
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name:
+      - eslint
+      - grunt
+      - gulp
+      - gtop
+      - http-server
+      - nodemon

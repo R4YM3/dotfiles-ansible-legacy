@@ -16,6 +16,7 @@
 # - import_tasks: projects/hetwebbureau.yml
 
 - import_tasks: software/packages.yml
+- import_tasks: software/npm.yml
 
 - block:
   - import_tasks: software/apt.yml
