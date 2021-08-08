@@ -14,6 +14,7 @@ if [ -f "/etc/debian_version" ]; then
     sudo apt-get full-upgrade -y
 
     sudo apt -y install software-properties-common
+    sudo apt -y install python3
 
     sudo add-apt-repository --update ppa:ansible/ansible
     sudo apt -y --force-yes install ansible
