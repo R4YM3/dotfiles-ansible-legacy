@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Source all files in ~/.config/aliases
-for f in ~/.config/aliases*; do source $f; done
+for f in ~/.config/aliases/*; do
+    . $f
+done
 
 alias dv="cd ~/Development"
 alias dl="cd ~/Downloads"
