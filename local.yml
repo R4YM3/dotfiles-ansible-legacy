@@ -3,35 +3,6 @@
   tags: always
   tasks:
 
-  - name: get current user name via whoami
-    become: false
-    local_action: command whoami
-    register: whoami
-    tags:
-    - global
-    - user
-
-  - name: vars | set global variables
-    set_fact:
-      USER: '{{ whoami.stdout }}'
-      HOME_DIR: '~'
-      CONFIG_DIR: '~/.config'
-      ALIASES_DIR: '~/.config/aliases'
-
-  - name: directories | create config directory
-    file:
-      path: '{{ CONFIG_DIR }}'
-      state: directory
-      owner: '{{ USER }}'
-      mode: 0755
-
-  - name: directories | create aliases directory
-    file:
-      path: '{{ALIASES_DIR}}'
-      state: directory
-      owner: '{{ USER }}'
-      mode: 0755
-
 - hosts: all
   tags: base
   roles:
