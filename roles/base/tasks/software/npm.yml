@@ -7,15 +7,45 @@
       - nodejs
       - npm
 
-- name: npm | install packages
+- name: npm | install packages | eslint
   tags: packages, npm
   npm:
     state: present
     global: yes
-    name:
-      - eslint
-      - grunt
-      - gulp
-      - gtop
-      - http-server
-      - nodemon
+    name: eslint
+
+- name: npm | install packages | grunt
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: grunt
+
+
+- name: npm | install packages | gulp
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: gulp
+
+- name: npm | install packages | gtop
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: gtop
+
+- name: npm | install packages | http-server
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: http-server
+
+- name: npm | install packages | nodemon
+  tags: packages, npm
+  npm:
+    state: present
+    global: yes
+    name: nodemon
