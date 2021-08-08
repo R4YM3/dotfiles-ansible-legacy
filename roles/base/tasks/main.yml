@@ -29,7 +29,6 @@
     owner: '{{ USER }}'
     mode: 0755
 
-# utilities
 - import_tasks: utilities/curl.yml
 - import_tasks: utilities/git.yml
 - import_tasks: utilities/ack.yml
@@ -42,11 +41,9 @@
 # projects
 # - import_tasks: projects/hetwebbureau.yml
 
-# software
 - block:
   - import_tasks: software/packages_apt.yml
   - import_tasks: software/packages_snap.yml
-  - import_tasks: software/terminal.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - block:
@@ -54,7 +51,6 @@
   - import_tasks: software/packages_homebrew_cask.yml
   when: ansible_distribution == 'MacOSX'
 
-# desktop enviroments
 - block:
   - import_tasks: desktop_environments/gnome/appearance.yml
   - import_tasks: desktop_environments/gnome/keyboard.yml
@@ -62,6 +58,7 @@
   - import_tasks: desktop_environments/gnome/power.yml
   - import_tasks: desktop_environments/gnome/night-light.yml
   - import_tasks: desktop_environments/gnome/screen.yml
+  - import_tasks: desktop_environments/gnome/terminal.yml
   - import_tasks: desktop_environments/gnome/tracker.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 

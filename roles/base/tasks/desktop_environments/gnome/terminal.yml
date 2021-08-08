@@ -1,5 +1,5 @@
-- name: terminal | theme | clone dracula theme
-  tags: terminal, theme, dracula
+- name: gnome | terminal | theme | clone dracula theme
+  tags: gnome, terminal, theme
   git:
     repo: https://github.com/dracula/gnome-terminal.git
     dest: '{{ TERMINAL_THEMES_DIR }}/dracula'
@@ -7,7 +7,8 @@
     #  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   when: 'SKIP'
 
-- name: terminal | make new default profile
+- name: gnome | terminal | make new default profile
+  tags: gnome, terminal, theme
   shell: >
     profile_id="$(uuidgen)"
     dconf write $dconfdir/default "'$profile_id'"
@@ -18,7 +19,8 @@
   when: 'SKIP'
 
 # https://github.com/dracula/gnome-terminal/issues/11
-- name: terminal | install dracula theme
+- name: gnome | terminal | install dracula theme
+  tags: gnome, terminal, theme
   become: yes
   shell: >
     'cd {{ TERMINAL_THEMES_DIR }}/dracula
@@ -26,22 +28,26 @@
   # when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   when: 'SKIP'
 
-- name: Terminal hide menubar
+- name: gnome | terminal | hide menubar
+  tags: gnome, terminal
   dconf:
     key: '/org/gnome/terminal/legacy/default-show-menubar'
-    value: 'false'
+    value: 'true'
 
-- name: Terminal hide scrollbar
+- name: gnome | terminal | hide scrollbar
+  tags: gnome, terminal
   dconf:
     key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/scrollbar-policy'
     value: "'never'"
 
-- name: Set terminal font to firacode
+- name: gnome | terminal | set terminal font to firacode
+  tags: gnome, terminal
   dconf:
     key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/font'
     value: "'Fira Code weight=453 12'"
 
-- name: Set terminal font to firacode
+- name: gnome | terminal | set terminal font to firacode
+  tags: gnome, terminal
   dconf:
     key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-system-font'
     value: 'false'
