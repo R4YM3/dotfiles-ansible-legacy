@@ -8,7 +8,6 @@
 - import_tasks: utilities/tmux.yml
 - import_tasks: utilities/tmuxinator.yml
 - import_tasks: utilities/vim.yml
-- import_tasks: utilities/packages_npm.yml
 - import_tasks: utilities/wget.yml
 - import_tasks: utilities/zsh.yml
 
