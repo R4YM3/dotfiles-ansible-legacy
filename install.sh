@@ -13,12 +13,13 @@ if [ -f "/etc/debian_version" ]; then
     sudo apt update -y
     sudo apt upgrade -y
     sudo apt full-upgrade -y
+    sudo apt autoremove -y
 
-    sudo apt install software-properties-common -y
     sudo apt install python3 -y
+    sudo apt install software-properties-common
 
     sudo add-apt-repository --update ppa:ansible/ansible
-    sudo apt --force-yes install ansible -y
+    sudo apt install ansible
 
     ansible-pull -U https://github.com/R4YM3/dotfiles-ansible.git --ask-become-pass
   fi
