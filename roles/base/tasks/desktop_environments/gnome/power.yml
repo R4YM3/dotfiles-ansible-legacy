@@ -34,6 +34,6 @@
     value: "1500"
 
 - name: gnome | power | disable screen dim
-  community.general.dconf:
+  dconf:
     key: '/org/gnome/settings-daemon/plugins/power/idle-dim'
     value: 'false'
