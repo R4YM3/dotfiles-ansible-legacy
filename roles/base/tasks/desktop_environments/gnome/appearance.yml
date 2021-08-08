@@ -1,5 +1,6 @@
 - name: gnome | appearance | copy wallpaper file
   tags: gnome,gnome-wallpaper
+  become: yes
   copy:
     src: gnome/forest-wallpaper.jpeg
     dest: /usr/share/backgrounds/forest-wallpaper.jpeg
