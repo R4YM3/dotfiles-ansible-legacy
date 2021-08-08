@@ -11,9 +11,12 @@
     - global
     - user
 
-  - name: vars | set USER
+  - name: vars | set global variables
     set_fact:
       USER: '{{ whoami.stdout }}'
+      HOME_DIR: '~',
+      CONFIG_DIR: '~/.config'
+      ALIASES_DIR: '~/.config/aliases'
 
   - name: directories | create config directory
     file:
