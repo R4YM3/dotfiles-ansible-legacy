@@ -29,4 +29,4 @@
       - teams-for-linux
       - opera
       - postman
-  when: !IS_ARM
+  when: not IS_ARM
