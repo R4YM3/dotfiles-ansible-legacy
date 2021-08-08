@@ -9,7 +9,12 @@ if [ -f "/etc/debian_version" ]; then
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
     sudo apt -y update
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get full-upgrade -y
+
     sudo apt -y install software-properties-common
+
     sudo add-apt-repository --update ppa:ansible/ansible
     sudo apt -y --force-yes install ansible
 
