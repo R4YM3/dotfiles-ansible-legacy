@@ -24,7 +24,7 @@
   tags: vim, dotfile, ctags
   copy:
     src: vim/ctags
-    dest: '{{ HOME_DIR }}/init.vim'
+    dest: '{{ HOME_DIR }}/.ctags'
     owner: '{{ USER }}'
 
 - name: vim | install | aliases
