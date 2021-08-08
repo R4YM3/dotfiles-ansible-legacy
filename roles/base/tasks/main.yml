@@ -1,19 +1,19 @@
 - include_vars: "{{ ansible_distribution }}.yml"
   tags: always
 
-  - name: directories | create config directory
-    file:
-      path: '{{ CONFIG_DIR }}'
-      state: directory
-      owner: '{{ USER }}'
-      mode: 0755
+- name: directories | create config directory
+  file:
+    path: '{{ CONFIG_DIR }}'
+    state: directory
+    owner: '{{ USER }}'
+    mode: 0755
 
-  - name: directories | create aliases directory
-    file:
-      path: '{{ALIASES_DIR}}'
-      state: directory
-      owner: '{{ USER }}'
-      mode: 0755
+- name: directories | create aliases directory
+  file:
+    path: '{{ALIASES_DIR}}'
+    state: directory
+    owner: '{{ USER }}'
+    mode: 0755
 
 - import_tasks: utilities/ack.yml
 - import_tasks: utilities/curl.yml
