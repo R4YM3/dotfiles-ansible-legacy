@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source all files in ~/.config/aliases
-for f in ~/.config/aliases/*; do
+for f in ~/.config/zsh/aliases/*; do
     . $f
 done
 

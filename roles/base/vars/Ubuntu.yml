@@ -1,7 +1,7 @@
 USER: 'picard'
 HOME_DIR: '/home/{{ USER }}'
 CONFIG_DIR: '{{ HOME_DIR }}/.config'
-ALIASES_DIR: '{{CONFIG_DIR}}/aliases'
+ALIASES_DIR: '{{CONFIG_DIR}}/zsh/aliases'
 NVIM_DIR: '{{CONFIG_DIR}}/nvim'
 TMUXINATOR_DIR: '{{CONFIG_DIR}}/tmuxinator'
 DEVELOPMENT_DIR: '~/Development'
