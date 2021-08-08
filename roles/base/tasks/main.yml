@@ -37,7 +37,6 @@
   - import_tasks: desktop_environments/gnome/power.yml
   - import_tasks: desktop_environments/gnome/screen.yml
   - import_tasks: desktop_environments/gnome/terminal.yml
-  - import_tasks: desktop_environments/gnome/tracker.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - block:
