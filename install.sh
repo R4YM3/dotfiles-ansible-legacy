@@ -8,12 +8,12 @@ if [ -f "/etc/debian_version" ]; then
   echo    # (optional) move to a new line
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
+    sudo apt -y --fix-broken install
+
     sudo apt -y update
     sudo apt-get update -y
     sudo apt-get upgrade -y
     sudo apt-get full-upgrade -y
-
-    sudo apt --fix-broken install
 
     sudo apt -y install software-properties-common
     sudo apt -y install python3
