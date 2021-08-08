@@ -1,0 +1,34 @@
+- name: gnome | peripherals | set power button behavior
+  tags: gnome,power
+  become_user: '{{ USER }}'
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/power-button-action"
+    value: "'suspend'"
+
+- name: gnome | peripherals | enable automatic suspend while plugged in to ac
+  tags: gnome,power
+  become_user: '{{ USER }}'
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
+    value: "'suspend'"
+
+- name: gnome | peripherals | set timeout for automatic suspend while plugged in to ac
+  tags: gnome,power
+  become_user: '{{ USER }}'
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-timeout"
+    value: "2700"
+
+- name: gnome | peripherals | enable automatic suspend while on battery
+  tags: gnome,power
+  become_user: '{{ USER }}'
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-battery-type"
+    value: "'suspend'"
+
+- name: gnome | peripherals | set timeout for automatic suspend while plugged in to ac
+  tags: gnome,power
+  become_user: '{{ USER }}'
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-battery-timeout"
+    value: "1500"
