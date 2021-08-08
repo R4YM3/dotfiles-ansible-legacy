@@ -4,8 +4,7 @@
     repo: https://github.com/dracula/gnome-terminal.git
     dest: '{{ TERMINAL_THEMES_DIR }}/dracula'
     clone: yes
-    #  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  when: 'INSTALL_TERMINAL_THEME'
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - name: gnome | terminal | make new default profile
   tags: gnome, terminal, theme
