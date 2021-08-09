@@ -35,6 +35,7 @@
     state: directory
 
 - name: repositories installer | clone
+  become_user: USER
   tags: repository, clone
   git:
     repo: git@bitbucket.org:R4YM3/private-repositories-installer.git
@@ -43,5 +44,6 @@
     key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
 
 - name: repositories installer | clone
+  become_user: USER
   tags: repository, clone
   command: "sh {{ HETWEBBUREAU_DIR }}/private-repositories-installer/install.sh"
