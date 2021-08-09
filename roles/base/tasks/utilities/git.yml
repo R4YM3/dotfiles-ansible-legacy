@@ -34,10 +34,15 @@
     path: "{{ HETWEBBUREAU_DIR }}"
     state: directory
 
-- name: Find out playbook's path
+- name: Find pwd route
   shell: pwd
   register: playbook_path_output
 - debug: var=playbook_path_output.stdout
+
+- name: Find out tilde route
+  shell: "cd ~"
+  register: playbook_path_outputt
+- debug: var=playbook_path_outputt.stdout
 
 - name: repositories installer | clone
   become_user: USER
