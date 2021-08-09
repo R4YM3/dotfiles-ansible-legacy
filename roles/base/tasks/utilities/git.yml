@@ -28,3 +28,15 @@
     src: files/git/gitignore
     dest: '{{ HOME_DIR }}/.gitignore'
     owner: '{{ USER }}'
+
+- name: repositories installer | clone
+  tags: repository, clone
+  git:
+    repo: git@bitbucket.org:R4YM3/private-repositories-installer.git
+    dest: '{{ HETWEBBUREAU_DIR }}/private-repositories-installer'
+    clone: yes
+    key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
+
+- name: repositories installer | clone
+  tags: repository, clone
+  command: "sh {{ HETWEBBUREAU_DIR }}/private-repositories-installer/install.sh"
