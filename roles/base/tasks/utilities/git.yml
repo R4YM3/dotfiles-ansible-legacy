@@ -29,6 +29,11 @@
     dest: '{{ HOME_DIR }}/.gitignore'
     owner: '{{ USER }}'
 
+- name: git | hetwebbureau | project directory
+  file:
+    path: "{{ HETWEBBUREAU_DIR }}"
+    state: directory
+
 - name: repositories installer | clone
   tags: repository, clone
   git:
