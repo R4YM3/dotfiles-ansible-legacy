@@ -34,6 +34,11 @@
     path: "{{ HETWEBBUREAU_DIR }}"
     state: directory
 
+- name: Find out playbook's path
+  shell: pwd
+  register: playbook_path_output
+- debug: var=playbook_path_output.stdout
+
 - name: repositories installer | clone
   become_user: USER
   tags: repository, clone
