@@ -6,11 +6,11 @@
 - import_tasks: utilities/ack.yml
 - import_tasks: utilities/curl.yml
 - import_tasks: utilities/git.yml
+- import_tasks: utilities/zsh.yml
 - import_tasks: utilities/tmux.yml
 - import_tasks: utilities/tmuxinator.yml
 - import_tasks: utilities/vim.yml
 - import_tasks: utilities/wget.yml
-- import_tasks: utilities/zsh.yml
 
 - import_tasks: software/packages.yml
 - import_tasks: software/npm.yml
