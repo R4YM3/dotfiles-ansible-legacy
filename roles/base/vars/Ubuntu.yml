@@ -1,5 +1,5 @@
 USER: 'picard'
-HOME_DIR: '/home/{{ USER }}'
+HOME_DIR: '{{ ansible_env.HOME }}'
 CONFIG_DIR: '{{ HOME_DIR }}/.config'
 ALIASES_DIR: '{{CONFIG_DIR}}/zsh/aliases'
 NVIM_DIR: '{{CONFIG_DIR}}/nvim'
