@@ -9,8 +9,8 @@
 
 - name: npm | permissions fix
   tags: packages, npm
-  become_user: {{ USER }}
-  shell: 'chown -R {{ USER }} {{ HOME_DIR }}.npm'
+  become_user: '{{ USER }}'
+  shell: 'chown -R {{ USER }} {{ HOME_DIR }}/.npm'
 
 - name: npm | install packages | eslint
   tags: packages, npm
