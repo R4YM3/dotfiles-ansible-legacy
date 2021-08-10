@@ -1,6 +1,6 @@
 - name: npm | install packages | eslint
   tags: packages, npm
-  command: 'npm install eslint'
+  command: 'npm install nodemon -g'
 
 - name: npm | install packages | grunt
   tags: packages, npm
