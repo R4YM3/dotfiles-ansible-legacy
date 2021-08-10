@@ -2,12 +2,8 @@ TODO:
 
 All:
 - fix: refactor npm install
-- feat: install public repositories
-- feat: install private repositories
 - install Fira Code Nerd Font
-- refactor: move .config/aliases into .config/zsh/aliases/
 - fix: setup YCMserver (typescript) on vim :PlugInstall
-- refactor: refactor USER var
 - feat: lutris
 - removed 'press [enter] on ansible install' in install.sh
 
