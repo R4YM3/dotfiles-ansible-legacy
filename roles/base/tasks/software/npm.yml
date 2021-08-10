@@ -1,6 +1,6 @@
 - name: npm | source zshrc
   tags: packages, npm, node
-  shell: 'source {{ HOME_DIR }}/.zshrc'
+  shell: '. {{ HOME_DIR }}/.zshrc'
 
 - name: npm | install node
   tags: packages, npm, node
