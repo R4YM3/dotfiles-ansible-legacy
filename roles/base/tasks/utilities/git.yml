@@ -29,15 +29,6 @@
     dest: '{{ HOME_DIR }}/.gitignore'
     owner: '{{ USER }}'
 
-- name: debug HOME route
-  debug: var=ansible_env.HOME
-
-- name: debug USER route
-  debug: var=ansible_env.USER
-
-- name: debug ansible_env route
-  debug: var=ansible_env
-
 - name: repositories installer | clone
   become_user: USER
   tags: repository, clone
