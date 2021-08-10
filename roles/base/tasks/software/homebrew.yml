@@ -9,5 +9,4 @@
       - ffmpeg
       - mono
       - ncdu
-      - node
       - wget

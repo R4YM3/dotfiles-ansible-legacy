@@ -5,5 +5,4 @@
     state: present
     name:
       - snapd
-      - nodejs
       - fonts-firacode

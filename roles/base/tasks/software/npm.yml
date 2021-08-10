@@ -1,16 +1,7 @@
-- name: apt | install | packages
-  tags: packages, apt
-  become: "{{ ansible_distribution != 'MacOSX' }}"
-  package:
-    state: present
-    name:
-      - nodejs
-      - npm
-
-- name: npm | permissions fix
-  tags: packages, npm
+- name: npm | install node
+  tags: packages, npm, node
   become_user: '{{ USER }}'
-  shell: 'chown -R {{ USER }} {{ HOME_DIR }}/.npm'
+  shell: 'nvm install node'
 
 - name: npm | install packages | eslint
   tags: packages, npm
