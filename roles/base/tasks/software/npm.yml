@@ -1,12 +1,9 @@
-- name: npm | source zshrc
-  tags: packages, npm, node
-  become_user: '{{ USER }}'
-  shell: '. {{ HOME_DIR }}/.zshrc'
-
-- name: npm | install node
-  tags: packages, npm, node
-  become_user: '{{ USER }}'
-  shell: 'nvm install node'
+- name: Install node and set version
+  become: yes
+  become_user: root
+  shell: "source /root/.nvm/nvm.sh && nvm install node"
+  args:
+    executable: /bin/bash
 
 - name: npm | install packages | eslint
   tags: packages, npm
