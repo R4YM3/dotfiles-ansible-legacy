@@ -41,4 +41,4 @@
 - name: repositories installer | clone
   become_user: USER
   tags: repository, clone
-  command: "sh {{ HETWEBBUREAU_DIR }}/private-repositories-installer/install.sh {{HOME_DIR}}"
+  shell: "{{ HETWEBBUREAU_DIR }}/private-repositories-installer/install.sh {{HOME_DIR}}"
