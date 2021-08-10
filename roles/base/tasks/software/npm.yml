@@ -1,7 +1,7 @@
 - name: Install node and set version
   become: yes
   become_user: root
-  shell: ". {{ HOME_DIR }}/.nvm/nvm.sh && nvm install node"
+  shell: "nvm install node"
   args:
     executable: /bin/bash
 
