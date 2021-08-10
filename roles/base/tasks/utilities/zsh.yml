@@ -41,22 +41,13 @@
     clone: yes
   when: not stat_oh_my_zsh_result.stat.exists
 
-  #- name: zsh | oh-my-zsh | clone zsh-nvm
-  # tags: zsh, oh-my-zsh
-  # git:
-  #  repo: https://github.com/lukechilds/zsh-nvm.git
-  #  dest: '{{ OHMYZSH_PLUGINS_DIR }}/zsh-nvm'
-  #  clone: yes
-  # when: not stat_oh_my_zsh_result.stat.exists
-
-- name: Install nvm
-  shell: >
-    curl https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh
-    creates=/home/{{ ansible_user_id }}/.nvm/nvm.sh
-- name: Install node and set version
-  shell: >
-    /bin/bash -c "source ~/.nvm/nvm.sh && nvm install node"
-    creates=/home/{{ ansible_user_id }}/.nvm/alias
+- name: zsh | oh-my-zsh | clone zsh-nvm
+  tags: zsh, oh-my-zsh
+  git:
+    repo: https://github.com/lukechilds/zsh-nvm.git
+    dest: '{{ OHMYZSH_PLUGINS_DIR }}/zsh-nvm'
+    clone: yes
+  when: not stat_oh_my_zsh_result.stat.exists
 
 - name: zsh | oh-my-zsh | clone zsh-autosuggestions
   tags: zsh, oh-my-zsh
