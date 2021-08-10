@@ -13,7 +13,7 @@
 - import_tasks: utilities/zsh.yml
 
 - import_tasks: software/packages.yml
-# - import_tasks: software/npm.yml
+- import_tasks: software/npm.yml
 
 - block:
   - import_tasks: software/apt.yml
