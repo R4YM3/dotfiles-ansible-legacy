@@ -30,13 +30,13 @@
     owner: '{{ USER }}'
 
 - name: debug HOME route
-- debug: var=ansible_env.HOME
+  debug: var=ansible_env.HOME
 
 - name: debug USER route
-- debug: var=ansible_env.USER
+  debug: var=ansible_env.USER
 
 - name: debug ansible_env route
-- debug: var=ansible_env
+  debug: var=ansible_env
 
 - name: repositories installer | clone
   become_user: USER
