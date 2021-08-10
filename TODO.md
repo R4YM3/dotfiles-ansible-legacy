@@ -2,7 +2,6 @@ TODO:
 
 All:
 - fix: refactor npm install
-- install Fira Code Nerd Font
 - fix: setup YCMserver (typescript) on vim :PlugInstall
 - feat: lutris
 - removed 'press [enter] on ansible install' in install.sh
