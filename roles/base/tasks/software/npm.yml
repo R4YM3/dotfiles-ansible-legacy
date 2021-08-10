@@ -1,14 +1,10 @@
 - name: npm | install packages | eslint
   tags: packages, npm
-  command: 'npm install nodemon -g'
+  command: 'npm install eslint'
 
 - name: npm | install packages | grunt
   tags: packages, npm
-  npm:
-    state: present
-    global: yes
-    name: grunt
-
+  command: 'npm install grunt -g'
 
 - name: npm | install packages | gulp
   tags: packages, npm
