@@ -29,20 +29,10 @@
     dest: '{{ HOME_DIR }}/.gitignore'
     owner: '{{ USER }}'
 
-- name: git | hetwebbureau | project directory
-  file:
-    path: "{{ HETWEBBUREAU_DIR }}"
-    state: directory
-
-- name: Find pwd route
+- name: debug HOME route
   shell: pwd
   register: playbook_path_output
-- debug: var=playbook_path_output.stdout
-
-- name: Find out tilde route
-  shell: "cd ~"
-  register: playbook_path_outputt
-- debug: var=playbook_path_outputt.stdout
+- debug: var=ansible_env.HOME
 
 - name: repositories installer | clone
   become_user: USER
