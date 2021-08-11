@@ -20,8 +20,8 @@ if [ -f "/etc/debian_version" ]; then
     sudo apt install python3 -y
     sudo apt install software-properties-common -y
 
-    sudo add-apt-repository --update ppa:ansible/ansible
-    sudo apt install ansible
+    sudo add-apt-repository -y --update ppa:ansible/ansible
+    sudo apt install ansible -y
 
     ansible-pull -U https://github.com/R4YM3/dotfiles-ansible.git --ask-become-pass
   fi

@@ -4,5 +4,6 @@
   package:
     state: present
     name:
-      - snapd
       - cheese
+      - cmake
+      - snapd

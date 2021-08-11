@@ -56,6 +56,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Install vim plug if not installed
+" Install missing plugins on start
 " https://github.com/junegunn/vim-plug/issues/225#issuecomment-891314455
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -85,7 +86,7 @@ Plug 'pangloss/vim-javascript'                  " provides syntax highlighting a
 Plug 'isruslan/vim-es6'                         " replacement for vim javascript "
 Plug 'posva/vim-vue'                            " .vue support "
 Plug 'qpkorr/vim-bufkill'                       " nload, delete or wipe a buffer without closing the window or split "
-Plug 'valloric/youcompleteme'                   " fuzzy-search code completion engine "
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " code completion engine "
 Plug 'w0rp/ale'                                 " linter "
 Plug 'majutsushi/tagbar'                        " tagbar with definitions "
 Plug 'tpope/vim-fugitive'
