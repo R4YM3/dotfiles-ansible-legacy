@@ -10,5 +10,5 @@
   tags: tmux, .tmux.conf, dotfile
   copy:
     src: tmux/tmux.conf
-    dest: '{{ CONFIG_DIR }}/.tmux.conf'
+    dest: '{{ HOME_DIR }}/.tmux.conf'
     owner: '{{ USER }}'
