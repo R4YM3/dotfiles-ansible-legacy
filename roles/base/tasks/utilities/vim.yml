@@ -27,6 +27,26 @@
     dest: '{{ HOME_DIR }}/.ctags'
     owner: '{{ USER }}'
 
+- name: vim | :PlugInstall
+  tags: vim, plugins, install
+  shell: "vim +'PlugInstall --sync' +qall &> /dev/null"
+
+- name: vim | YCM dependecies 
+  tags: vim, ycm
+  become: yes
+  package:
+    state: present
+    name:
+      - python3-dev
+      - cmake
+
+- name: zsh | start YCM server
+  tags: vim, ycm
+  become: yes
+  user:
+    name: '{{ USER }}'
+    shell: "python3 {{ HOME_DIR }}/.config/nvim/plugged/youcompleteme/install.py --ts-completer"
+
 - name: vim | install | aliases
   tags: vim, aliases
   copy:
