@@ -29,7 +29,7 @@
 
 - name: vim | :PlugInstall
   tags: vim, plugins, install
-  shell: "vim +'PlugInstall --sync' +qall &> /dev/null"
+  shell: "vim +'PlugInstall --sync' +qa"
 
 - name: vim | YCM dependecies 
   tags: vim, ycm
