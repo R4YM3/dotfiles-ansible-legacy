@@ -1,6 +1,5 @@
----
 - hosts: all
-  sudo: True
+  become: yes
   vars:
     - apt_file: /etc/apt/sources.list.d/google-chrome.list
   tasks:
