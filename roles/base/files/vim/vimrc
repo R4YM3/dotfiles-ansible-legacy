@@ -60,6 +60,7 @@ nnoremap <C-H> <C-W><C-H>
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  silent execute '!python3 ~/.config/nvim/plugged/youcompleteme/install.py --ts-completer'
 endif
 
 " Install missing plugins on Vim startup
