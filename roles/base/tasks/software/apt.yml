@@ -5,4 +5,3 @@
     state: present
     name:
       - snapd
-      - fonts-firacode

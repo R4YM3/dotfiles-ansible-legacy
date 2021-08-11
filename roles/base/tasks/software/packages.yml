@@ -7,7 +7,6 @@
       - awscli
       - catimg
       - cmake
-      - fonts-firacode
       - fonts-powerline
       - htop
       - lynx
