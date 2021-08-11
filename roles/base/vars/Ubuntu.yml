@@ -12,4 +12,4 @@ OHMYZSH_DIR: '{{ HOME_DIR }}/.oh-my-zsh'
 OHMYZSH_PLUGINS_DIR: '{{ OHMYZSH_DIR }}/custom/plugins'
 TERMINAL_THEMES_DIR: '{{ CONFIG_DIR }}/terminal-themes'
 INSTALL_TERMINAL_THEME: false
-IS_ARM: true;
+IS_ARM: false;
