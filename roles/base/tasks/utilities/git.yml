@@ -46,7 +46,7 @@
     clone: yes
     key_file: '{{ HOME_DIR }}/.ssh/id_rsa'
 
-#-name: repositories installer | clone
-# become_user: USER
-# tags: repository, clone
-# shell: "{{ HETWEBBUREAU_DIR }}/private-repositories-installer/install.sh {{HOME_DIR}}"
+- name: repositories installer | clone
+  become_user: USER
+  tags: repository, clone
+  shell: "{{ HETWEBBUREAU_DIR }}/private-repositories-installer/install.sh {{HOME_DIR}}"
