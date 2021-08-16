@@ -7,7 +7,7 @@
     name:
       # - code
       - gitkraken
-      - slack
+
 
 - name: snap | install | classic packages
   tags: packages, snap
@@ -24,5 +24,6 @@
 #      - mailspring
       - opera
       - postman
+      - slack
       - teams-for-linux
       - vlc
