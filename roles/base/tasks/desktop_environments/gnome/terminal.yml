@@ -39,14 +39,12 @@
     key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/scrollbar-policy'
     value: "'never'"
 
-#- name: gnome | terminal | set terminal font to firacode
-#  tags: gnome, terminal
-#  dconf:
-#    key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/font'
-#    value: "'Fira Code weight=453 12'"
+- name: gnome | terminal | install font
+  tags: gnome, terminal, firecode
+  shell: 'output=~/Downloads/FiraCode.zip; wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip --output-document=${output} && unzip ${output} -d ~/.fonts && fc-cache -fv ;'
 
-#- name: gnome | terminal | set terminal font to firacode
-#  tags: gnome, terminal
-#  dconf:
-#    key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-system-font'
-#    value: 'false'
+- name: gnome | terminal | set terminal font to firacode
+  tags: gnome, terminal
+  dconf:
+    key: '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-system-font'
+    value: 'false'
