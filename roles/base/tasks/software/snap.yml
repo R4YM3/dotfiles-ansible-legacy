@@ -1,17 +1,3 @@
-# - name: install snap packages
-#  become: yes
-#  snap:
-#    state: present
-#    name:
-#      - discord
-#      - libreoffice
-#      - mailspring
-#      - opera
-#      - postman
-#      - slack
-#      - teams-for-linux
-#      - vlc
-
 - name: snap | install | classic packages
   tags: packages, snap
   become: yes
@@ -19,13 +5,24 @@
     classic: yes
     state: present
     name:
+      - code
+      - gitkraken
+      - slack
+
+- name: snap | install | classic packages
+  tags: packages, snap
+  become: yes
+  snap:
+    state: present
+    name:
       - 1password
       - beekeeper-studio
-      # - code
       - chromium
-      - gitkraken
+      - discord
       - icloud-for-linux
-      - slack
-      - teams-for-linux
+      - libreoffice
+#      - mailspring
       - opera
       - postman
+      - teams-for-linux
+      - vlc
