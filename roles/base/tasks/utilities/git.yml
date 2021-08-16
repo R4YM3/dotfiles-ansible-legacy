@@ -31,7 +31,7 @@
 
 - name: Create ~/Development/hetwebbureau dir
   file:
-    path: {{ HETWEBBUREAU_DIR }}
+    path: '{{ HETWEBBUREAU_DIR }}'
     state: directory
     owner: www-data
     group: www-data
