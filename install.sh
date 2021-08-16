@@ -45,6 +45,7 @@ function post_install {
   sensible-browser http://www.tidal.com
   sensible-browser http://www.notion.so
   sensible-browser https://office.live.com/start/MyAccount.aspx
+  sensible-browser https://web.whatsapp.com/
 
   # Install games
   sensible-browser https://lutris.net/games/overwatch/
