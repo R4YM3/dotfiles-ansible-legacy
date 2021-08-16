@@ -19,13 +19,13 @@
     classic: yes
     state: present
     name:
-      #  1password
+      # - 1password
       - beekeeper-studio
       # - code
       - chromium
       - gitkraken
       - icloud-for-linux
-      - slack
+      # - slack
       - teams-for-linux
-      - opera
-      - postman
+      # - opera
+      # - postman
