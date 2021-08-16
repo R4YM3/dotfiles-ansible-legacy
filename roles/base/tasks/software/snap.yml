@@ -17,10 +17,10 @@
     name:
       - beekeeper-studio
       - chromium
-        # - discord
+      # - discord
       - icloud-for-linux
-      - libreoffice
-#      - mailspring
+      # - libreoffice
+      # - mailspring
       - opera
       - postman
       - slack
