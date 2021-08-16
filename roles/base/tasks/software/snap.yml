@@ -26,6 +26,6 @@
       - gitkraken
       - icloud-for-linux
       # - slack
-      - teams-for-linux
+      # - teams-for-linux
       # - opera
       # - postman
