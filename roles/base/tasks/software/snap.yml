@@ -17,7 +17,7 @@
     name:
       - beekeeper-studio
       - chromium
-      - discord
+        # - discord
       - icloud-for-linux
       - libreoffice
 #      - mailspring
@@ -25,4 +25,4 @@
       - postman
       - slack
       - teams-for-linux
-      - vlc
+      # - vlc
