@@ -5,7 +5,7 @@
     classic: yes
     state: present
     name:
-      - code
+      # - code
       - gitkraken
       - slack
 
