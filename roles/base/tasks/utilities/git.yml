@@ -33,8 +33,7 @@
   file:
     path: '{{ HETWEBBUREAU_DIR }}'
     state: directory
-    owner: www-data
-    group: www-data
+    owner: '{{ USER }}'
     mode: 0775
     recurse: yes
 
