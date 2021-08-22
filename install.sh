@@ -4,7 +4,7 @@
 # xcode-select --install
 
 if [ -f "/etc/debian_version" ]; then
-    read -p "Did you created a ssh key and added to all services? press 'Y' or 'y' to continue " -n 1 -r
+    read -p "Did you created an ssh key and added it to all services? press 'Y' or 'y' to continue " -n 1 -r
   echo    # (optional) move to a new line
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
