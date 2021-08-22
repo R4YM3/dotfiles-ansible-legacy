@@ -14,3 +14,8 @@
       - quicklookase
       - suspicious-package
       - webpquicklook
+
+- name: macos | quicklook | plugin permissions
+  tags: macos, quicklook
+  become_user: USER
+  shell: 'xattr -cr ~/Library/QuickLook/*.qlgenerator'
