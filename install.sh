@@ -3,11 +3,12 @@
 # IF MAC...
 # xcode-select --install
 
-if [ -f "/etc/debian_version" ]; then
-    read -p "Did you created an ssh key and added it to all services? press 'Y' or 'y' to continue " -n 1 -r
-  echo    # (optional) move to a new line
-  if [[ $REPLY =~ ^[Yy]$ ]]
-  then
+read -p "Did you created an ssh key and added it to all services? press 'Y' or 'y' to continue " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  if [ -f "/etc/debian_version" ]; then
+
     sudo apt --fix-broken install -y
     sudo dpkg --configure -a
 
@@ -22,11 +23,11 @@ if [ -f "/etc/debian_version" ]; then
 
     sudo add-apt-repository -y --update ppa:ansible/ansible
     sudo apt install ansible -y
-
-    ansible-pull -U https://github.com/R4YM3/dotfiles-ansible.git --ask-become-pass
-
-    post_install
   fi
+  
+  ansible-pull -U https://github.com/R4YM3/dotfiles-ansible.git --ask-become-pass
+
+  post_install
 fi
 
 function post_install {
