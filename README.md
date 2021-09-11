@@ -1,7 +1,7 @@
 # dotfiles-ansible
 
 The script will check if host Debian or Mac Os and setup it accordingly to my personal taste.
-It will install all my favorite apps and command interfaces (see `./install`). It will also config the host OS, config some apps and command interface. To finish it all off Ubuntu and multiple apps will get Dracula theme (see `./config`).
+It will install and config all my favorite apps and command interfaces. To finish it all off Ubuntu and multiple apps will get Dracula theme (see `./config`).
 
 ## Screenshot
 ![Mac OS Iterm2 with nvim and tmux screenshot](https://raw.githubusercontent.com/R4YM3/dotfiles-ansible/main/screenshot.png)
