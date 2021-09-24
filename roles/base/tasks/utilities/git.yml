@@ -29,6 +29,14 @@
     dest: '{{ HOME_DIR }}/.gitignore'
     owner: '{{ USER }}'
 
+- name: Create ~/Development/hetwebbureau dir
+  file:
+    path: '{{ HETWEBBUREAU_DIR }}'
+    state: directory
+    owner: '{{ USER }}'
+    mode: 0775
+    recurse: yes
+
 - name: repositories installer | clone
   become_user: USER
   tags: repository, clone

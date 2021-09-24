@@ -1,11 +1,16 @@
+USER: '{{ ansible_env.USER }}'
+HOME_DIR: '{{ ansible_env.HOME }}'
 CONFIG_DIR: '{{ HOME_DIR }}/.config'
-ALIASES_DIR: '{{CONFIG_DIR}}/aliases'
-NVIM_DIR: '{{CONFIG_DIR}}/nvim'
-TMUXINATOR_DIR: '{{CONFIG_DIR}}/tmuxinator'
-DEVELOPMENT_DIR: '~/Development'
-HETWEBBUREAU_DIR: '{{DEVELOPMENT_DIR}}/hetwebbureau'
-ZSH_DIR: '{{HOME_DIR}}/.config/zsh'
-OHMYZSH_DIR: '{{HOME_DIR}}/.oh-my-zsh'
-OHMYZSH_PLUGINS_DIR: '{{OHMYZSH_DIR}}/custom/plugins'
-TERMINAL_THEMES_DIR: '{{CONFIG_DIR}}/terminal-themes'
-SKIP: false
+ALIASES_DIR: '{{ CONFIG_DIR }}/zsh/aliases'
+NVIM_DIR: '{{ CONFIG_DIR }}/nvim'
+TMUXINATOR_DIR: '{{ CONFIG_DIR }}/tmuxinator'
+DEVELOPMENT_DIR: '{{ HOME_DIR }}/Development'
+HETWEBBUREAU_DIR: '{{ DEVELOPMENT_DIR }}/hetwebbureau'
+ZSH_DIR: '{{ HOME_DIR }}/.config/zsh'
+    #OHMYZSH_DIR: '{{ ansible_env.OH_MY_ZSH }}'
+OHMYZSH_DIR: '{{ HOME_DIR }}/.oh-my-zsh'
+OHMYZSH_PLUGINS_DIR: '{{ OHMYZSH_DIR }}/custom/plugins'
+TERMINAL_THEMES_DIR: '{{ CONFIG_DIR }}/terminal-themes'
+INSTALL_TERMINAL_THEME: false
+IS_ARM: false;
+

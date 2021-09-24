@@ -3,13 +3,12 @@
 #  snap:
 #    state: present
 #    name:
+##     - code
 #      - discord
 #      - libreoffice
 #      - mailspring
 #      - opera
-#      - postman
 #      - slack
-#      - teams-for-linux
 #      - vlc
 
 - name: snap | install | classic packages
@@ -19,14 +18,21 @@
     classic: yes
     state: present
     name:
-      - 1password
       - beekeeper-studio
-      # - code
       - chromium
       - gitkraken
       - icloud-for-linux
+
+- name: snap | install | classic packages
+  tags: packages, snap
+  become: yes
+  snap:
+    classic: yes
+    state: present
+    name:
+      - 1password
       - slack
       - teams-for-linux
-      - opera
       - postman
       - robo3t-snap
+  when: ansible_distribution_version == '21.04'

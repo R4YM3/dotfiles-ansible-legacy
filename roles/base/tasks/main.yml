@@ -3,6 +3,9 @@
 
 - import_tasks: desktop_environments/directories.yml
 
+- name: Distribution version
+  debug: msg="{{ ansible_distribution_version}}"
+
 - import_tasks: utilities/ack.yml
 - import_tasks: utilities/curl.yml
 - import_tasks: utilities/git.yml
