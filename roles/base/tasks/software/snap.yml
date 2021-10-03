@@ -34,4 +34,5 @@
       - slack
       - teams-for-linux
       - postman
+      - robo3t-snap
   when: ansible_distribution_version == '21.04'

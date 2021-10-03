@@ -22,9 +22,13 @@
 --ignore-dir=build/
 --ignore-dir=dist/
 --ignore-dir=coverage/
+--ignore-dir=jest-coverage/
+--ignore-dir=cypress-coverage/
+--ignore-dir=.nyc_output/
 
 --ignore-file=is:tags
 --ignore-file=is:stats.json
+--ignore-file=is:junit.xml
 
 
 #make sure ack knows how to search common filetypes used in rails projects
