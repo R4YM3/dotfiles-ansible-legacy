@@ -1,6 +1,6 @@
 - name: Print the gateway for each host when defined
   debug:
-    msg: System {{ ansible_distribution }} IS_MACOSX
+    msg: {{ ansible_distribution }} IS_MACOSX
 
 - name: Print IS_MACOSX
   debug:
@@ -8,7 +8,7 @@
 
 - name: Print IS_DEBIAN_UBUNTU
   debug:
-    msg: IS_DEBIAN_UBUNTU {{ IS_DEBIAN_UBUNTU}}
+    msg: IS_DEBIAN_UBUNTU {{ IS_DEBIAN_UBUNTU }}
 
 - name: ack | apt install | packages
   tags: ack
