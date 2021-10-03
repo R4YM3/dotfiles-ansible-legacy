@@ -12,4 +12,4 @@ OHMYZSH_PLUGINS_DIR: '{{ OHMYZSH_DIR }}/custom/plugins'
 TERMINAL_THEMES_DIR: '{{ CONFIG_DIR }}/terminal-themes'
 INSTALL_TERMINAL_THEME: false
 IS_ARM: false
-IS_DEBIAN_UBUNTU: '{{ ansible_distribution == "Debian" or ansible_distribution == "Ubuntu" }}'
+IS_UBUNTU: '{{ ansible_distribution == "Debian" or ansible_distribution == "Ubuntu" }}'

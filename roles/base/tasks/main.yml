@@ -21,7 +21,7 @@
   - import_tasks: software/apt.yml
   - import_tasks: software/snap.yml
     # - import_tasks: software/google-chrome.yml
-  when: IS_DEBIAN_UBUNTU
+  when: IS_UBUNTU
 
 - block:
   - import_tasks: software/homebrew.yml
