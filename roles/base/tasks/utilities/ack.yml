@@ -4,11 +4,11 @@
 
 - name: Print IS_MACOSX
   debug:
-    msg: IS_MACOSX {{ IS_MACOSX }}
+    msg: IS_MACOSX
 
 - name: Print IS_UBUNTU
   debug:
-    msg: IS_UBUNTU {{ IS_UBUNTU }}
+    msg: IS_UBUNTU
 
 - name: ack | apt install | packages
   tags: ack
