@@ -1,10 +1,10 @@
 - name: Print the gateway for each host when defined
   debug:
-    msg: System {{ ansible_distribution }}
+    msg: System {{ ansible_distribution }}IS_MACOSX
 
 - name: ack | apt install | packages
   tags: ack
-  become: "{{ ansible_distribution != 'MacOSX' }}"
+  become: IS_DEBIAN_UBUNTU
   package:
     state: present
     name:
