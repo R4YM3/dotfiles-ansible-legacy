@@ -2,15 +2,17 @@
   debug:
     msg: '{{ ansible_distribution }} ?? {{IS_MACOSX}}'
 
-- name: Print IS_MACOSX
-  debug:
-    msg: '{{ IS_MACOSX }}'
-
-- name: Print IS_UBUNTU
-  debug:
-    msg: '{{ IS_UBUNTU }}'
-
 - name: ack | apt install | packages
+  tags: ack
+  become: yes
+  package:
+    state: present
+    name:
+      - ack
+      - ack-grep
+  when: IS_UBUNTU
+
+- name: ack | homebrew install | packages
   tags: ack
   become: no
   package:
@@ -18,6 +20,7 @@
     name:
       - ack
       - ack-grep
+  when: IS_MACOSX
 
 - name: ack | install | .ackrc
   tags: ack, .ackrc, dotfile
