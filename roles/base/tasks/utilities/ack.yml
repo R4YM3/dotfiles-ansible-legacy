@@ -12,7 +12,7 @@
 
 - name: ack | apt install | packages
   tags: ack
-  become: IS_UBUNTU
+  become: {{ IS_UBUNTU }}
   package:
     state: present
     name:
