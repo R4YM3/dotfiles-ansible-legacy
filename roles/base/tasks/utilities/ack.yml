@@ -1,4 +1,8 @@
-- name: ack |apt install | packages
+- name: Print the gateway for each host when defined
+  debug:
+    msg: System {{ ansible_distribution }}
+
+- name: ack | apt install | packages
   tags: ack
   become: "{{ ansible_distribution != 'MacOSX' }}"
   package:
