@@ -4,15 +4,15 @@
 
 - name: Print IS_MACOSX
   debug:
-    msg: {{ IS_MACOSX }}
+    msg: '{{ IS_MACOSX }}'
 
 - name: Print IS_UBUNTU
   debug:
-    msg: {{ IS_UBUNTU }}
+    msg: '{{ IS_UBUNTU }}'
 
 - name: ack | apt install | packages
   tags: ack
-  become: IS_UBUNTU
+  become: '{{ IS_UBUNTU }}'
   package:
     state: present
     name:
