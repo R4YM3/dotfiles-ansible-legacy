@@ -1,3 +1,5 @@
+This project is going to be  deprecated in favor of https://github.com/R4YM3/dotfiles-ansible-refactor
+
 # dotfiles-ansible
 
 The script will check if host Debian or Mac Os and setup it accordingly to my personal taste.
