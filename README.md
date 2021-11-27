@@ -1,4 +1,4 @@
-This project is going to be  deprecated in favor of https://github.com/R4YM3/dotfiles-ansible-refactor
+This project is going to be  deprecated in favor of https://github.com/R4YM3/dotfiles-ansible
 
 # dotfiles-ansible
 
